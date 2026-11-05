@@ -896,7 +896,7 @@
    "label": "Clint Eastwood",
    "type": "actor",
    "ext": true,
-   "info": "L'uomo senza nome della trilogia del dollaro. Kurt Russell ha detto di aver basato Snake Plissken su questo personaggio."
+   "info": "L'uomo senza nome della trilogia del dollaro. Kurt Russell ha detto di aver preso spunto da questo personaggio per la sua interpretazione di Snake Plissken."
   },
   {
    "id": "c_lvc",
@@ -1110,7 +1110,7 @@
    "label": "Fuga da New York",
    "type": "inf_film",
    "ext": true,
-   "info": "Snake Plissken (Kurt Russell) richiama l'uomo senza nome di Eastwood.",
+   "info": "Snake Plissken (Kurt Russell). Russell ha dichiarato di aver modellato la propria interpretazione sull'uomo senza nome di Eastwood, spinto dal casting di Lee Van Cleef.",
    "year": 1981
   },
   {
@@ -3022,7 +3022,7 @@
    "c_eastwood",
    "c_eny",
    "inspired",
-   "dichiarato",
+   "documentato",
    "The Digital Fix",
    "https://www.thedigitalfix.com/kurt-russell/escape-from-new-york-character-clint-eastwood"
   ],
