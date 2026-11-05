@@ -223,7 +223,10 @@ function paint(){
  if(q)nodeSel.classed('dim',d=>!d.label.toLowerCase().includes(q));
  updLabels();
 }
-function updLabels(){if(nodeSel)nodeSel.select('text.lb').style('display',d=>showLabel(d)?null:'none');}
+function scaleLabels(){if(!nodeSel)return;const k=d3.zoomTransform(svg.node()).k;
+ nodeSel.select('text.lb').style('font-size',(11/k)+'px').style('stroke-width',(3/k)+'px').attr('dy',d=>nodeR(d)+12/k);
+ nodeSel.select('text.bd').style('font-size',(10/k)+'px').attr('dx',d=>nodeR(d)+4/k).attr('dy',4/k);}
+function updLabels(){scaleLabels();if(nodeSel)nodeSel.select('text.lb').style('display',d=>showLabel(d)?null:'none');}
 sim.on('tick',()=>{
  linkSel.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
  nodeSel.attr('transform',d=>`translate(${d.x},${d.y})`);
