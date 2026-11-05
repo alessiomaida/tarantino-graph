@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tarantino · Grafo delle influenze (v3 Esplora)</title>
+<style>
+:root{--bg:#fff;--panel:#fbfbfa;--bd:#e9e9e7;--tx:#37352f;--mut:#787774;--dot:#e6e6e3;--hov:#efefed;--link:#b9b8b3}
+:root[data-theme=dark]{--bg:#191919;--panel:#202020;--bd:#2f2f2f;--tx:#e6e6e4;--mut:#9b9b97;--dot:#2a2a2a;--hov:#2b2b2b;--link:#4a4a48}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#191919;--panel:#202020;--bd:#2f2f2f;--tx:#e6e6e4;--mut:#9b9b97;--dot:#2a2a2a;--hov:#2b2b2b;--link:#4a4a48}}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);font:14px/1.45 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+#app{display:flex;height:100vh}
+#side{width:264px;flex:none;background:var(--panel);border-right:1px solid var(--bd);padding:16px 14px;overflow:auto}
+h1{font-size:15px;margin:0 0 2px;font-weight:600}
+.sub{color:var(--mut);font-size:12px;margin-bottom:14px}
+h2{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);font-weight:600;margin:16px 0 6px}
+input[type=search]{width:100%;padding:6px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit}
+.seg{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden}
+.seg button{flex:1;padding:5px 0;border:0;background:var(--bg);color:var(--mut);font:inherit;cursor:pointer}
+.seg button+button{border-left:1px solid var(--bd)}
+.seg button.on{background:var(--hov);color:var(--tx);font-weight:600}
+.chip{display:flex;align-items:center;gap:8px;padding:3px 6px;border-radius:5px;cursor:pointer;user-select:none}
+.chip:hover{background:var(--hov)}
+.chip.off{opacity:.38}
+.chip svg{flex:none}
+.chip .n{margin-left:auto;color:var(--mut);font-size:12px}
+.chip small{color:var(--mut)}
+.btn{margin-top:14px;width:100%;padding:6px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit;cursor:pointer}
+#stats{color:var(--mut);font-size:12px;margin-top:12px}
+#stage{flex:1;position:relative;min-width:0;background-image:radial-gradient(var(--dot) 1px,transparent 1px);background-size:20px 20px}
+#svg{width:100%;height:100%;display:block;cursor:grab}
+#ip{position:absolute;top:16px;right:16px;width:320px;max-height:calc(100% - 32px);overflow:auto;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;box-shadow:0 6px 24px rgba(0,0,0,.12);display:none}
+#ip h3{margin:6px 0 2px;font-size:17px;line-height:1.25}
+#ip .x{float:right;cursor:pointer;color:var(--mut);border:0;background:none;font-size:18px}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;font-size:11px;color:#fff}
+#ip p{margin:8px 0;color:var(--tx)}
+#ip ul{list-style:none;margin:6px 0 0;padding:0}
+#ip li{padding:4px 0;border-top:1px solid var(--bd);font-size:13px}
+#ip li .rt{color:var(--mut)}
+#ip a.go{color:inherit;font-weight:600;cursor:pointer;text-decoration:underline;text-decoration-color:var(--bd)}
+.cf{font-size:10.5px;padding:0 6px;border-radius:4px;border:1px solid var(--bd);color:var(--mut);margin-left:4px}
+.src{font-size:12px;display:block;color:var(--mut)}
+.src a{color:var(--mut)}
+.link{stroke:var(--link)}
+text.lb{font-size:11px;fill:var(--tx);paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.dim{opacity:.1}
+.ver{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden;margin-bottom:6px}.ver a{flex:1;text-align:center;padding:5px 2px;white-space:nowrap;color:var(--mut);text-decoration:none;font-size:12.5px}.ver a+a{border-left:1px solid var(--bd)}.ver a.on{background:var(--hov);color:var(--tx);font-weight:600}.vd{font-size:11px;color:var(--mut);margin-bottom:12px;line-height:1.35}
+text.bd{font-size:10px;fill:var(--mut);font-weight:600;pointer-events:none}
+#ip li.hid a.go{opacity:.55}
+.act{display:flex;gap:6px;margin:8px 0}
+.act button,#fb button{padding:4px 9px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit;font-size:12.5px;cursor:pointer}
+.act button:hover,#fb button:hover{background:var(--hov)}
+#fb{position:absolute;top:14px;left:50%;transform:translateX(-50%);max-width:calc(100% - 380px);display:none;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:6px 10px;box-shadow:0 4px 16px rgba(0,0,0,.1);flex-wrap:wrap}
+#fb button:disabled{opacity:.35;cursor:default}
+#fb button.on{background:var(--hov);font-weight:600}
+#fb .crumbs{font-size:13px}#fb .crumbs a{cursor:pointer;color:var(--mut)}#fb .crumbs a.cur{color:var(--tx);font-weight:600}
+@media (max-width:760px){#fb{max-width:calc(100% - 24px)}}
+@media (max-width:760px){#app{flex-direction:column}#side{width:100%;height:42vh;border-right:0;border-bottom:1px solid var(--bd)}#ip{width:calc(100% - 32px)}}
+</style>
+</head>
+<body>
+<div id="app">
+ <aside id="side">
+  <div class="ver"><a href="v2.html">v2 · Tutto</a><a href="v3.html" class="on">v3 · Esplora</a><a href="index.html">v4 · Registi</a></div>
+  <div class="vd">v2 tutto con filtri · v3 apri e focus · v4 registi e riferimenti a più livelli</div>
+  <h1>Tarantino · influenze</h1>
+  <div class="sub">Crediti dei film + cinema, musica, letteratura e TV che li hanno ispirati</div>
+  <input id="q" type="search" placeholder="Cerca un nodo… (Invio per andare)">
+  <h2>Navigazione</h2>
+  <div class="seg" id="nav"><button data-n="explore" class="on">Esplora</button><button data-n="full">Tutto</button></div>
+  <div class="vd" id="navhint" style="margin:6px 0 0"></div>
+  <button class="btn" id="collapse" style="margin-top:8px">Comprimi tutto</button>
+  <h2>Contenuto</h2>
+  <div class="seg" id="mode"><button data-m="all" class="on">Tutto</button><button data-m="credits">Crediti</button><button data-m="infl">Influenze</button></div>
+  <h2>Crediti</h2><div id="tc"></div>
+  <h2>Influenze</h2><div id="ti"></div>
+  <h2>Affidabilità del legame</h2><div id="cf"></div>
+  <button class="btn" id="theme">Tema chiaro / scuro</button>
+  <button class="btn" id="fit">Ricentra</button>
+  <div id="stats"></div>
+ </aside>
+ <main id="stage"><svg id="svg"></svg><div id="fb"></div><div id="ip"></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const D={"meta": {"version": "2.0", "updated": "2026-11-05", "note": "Crediti compilati a mano (non scaricati da OMDb). Ogni arco di influenza ha una fonte web e un livello di affidabilita."}, "nodes": [{"id": "qt", "label": "Quentin Tarantino", "type": "director", "info": "Nato a Knoxville (Tennessee) il 27 marzo 1963. Palma d'oro a Cannes 1994 per Pulp Fiction. Nel grafo: 10 film (Kill Bill e diviso nei due volumi)."}, {"id": "rd", "label": "Reservoir Dogs", "type": "movie", "year": 1992, "info": "Esordio alla regia, presentato al Sundance. Una rapina finita male e il sospetto di un infiltrato."}, {"id": "pf", "label": "Pulp Fiction", "type": "movie", "year": 1994, "info": "Palma d'oro a Cannes 1994 e Oscar per la sceneggiatura originale (con Roger Avary). Struttura a episodi non lineare."}, {"id": "jb", "label": "Jackie Brown", "type": "movie", "year": 1997, "info": "Adattamento del romanzo Rum Punch di Elmore Leonard. Omaggio alla blaxploitation degli anni '70."}, {"id": "kb1", "label": "Kill Bill Vol.1", "type": "movie", "year": 2003, "info": "La vendetta della Sposa: arti marziali, samurai, blaxploitation, spaghetti western e una sequenza anime di Production I.G."}, {"id": "kb2", "label": "Kill Bill Vol.2", "type": "movie", "year": 2004, "info": "Seconda parte, dai toni piu western; include l'addestramento della Sposa con Pai Mei."}, {"id": "dp", "label": "Death Proof", "type": "movie", "year": 2007, "info": "Slasher con auto d'epoca; segmento di Tarantino del progetto Grindhouse insieme a Planet Terror di Robert Rodriguez."}, {"id": "ib", "label": "Inglourious Basterds", "type": "movie", "year": 2009, "info": "Seconda guerra mondiale in chiave alternativa. Christoph Waltz ha vinto l'Oscar come attore non protagonista."}, {"id": "du", "label": "Django Unchained", "type": "movie", "year": 2012, "info": "Western nel Sud schiavista, tributo agli spaghetti western. Oscar per la sceneggiatura originale."}, {"id": "h8", "label": "The Hateful Eight", "type": "movie", "year": 2015, "info": "Western da camera in Ultra Panavision 70mm. Ennio Morricone ha vinto l'Oscar per la colonna sonora."}, {"id": "ouath", "label": "Once Upon a Time in Hollywood", "type": "movie", "year": 2019, "info": "Hollywood, 1969. Golden Globe come miglior film commedia o musicale."}, {"id": "slj", "label": "Samuel L. Jackson", "type": "actor", "info": "6 film: Pulp Fiction, Jackie Brown, Kill Bill Vol.2 (Rufus, cameo), Inglourious Basterds (voce narrante), Django Unchained, The Hateful Eight. Non e in Once Upon a Time in Hollywood."}, {"id": "hk", "label": "Harvey Keitel", "type": "actor", "info": "Mr. White in Le iene e Winston Wolfe in Pulp Fiction."}, {"id": "tr", "label": "Tim Roth", "type": "actor", "info": "Mr. Orange (Le iene), Pumpkin (Pulp Fiction), Oswaldo Mobray (The Hateful Eight)."}, {"id": "mm", "label": "Michael Madsen", "type": "actor", "info": "Mr. Blonde (Le iene), Budd (Kill Bill), Joe Gage (The Hateful Eight), lo sceriffo Hackett in Once Upon a Time in Hollywood."}, {"id": "ut", "label": "Uma Thurman", "type": "actor", "info": "Mia Wallace in Pulp Fiction e la Sposa in Kill Bill."}, {"id": "jt", "label": "John Travolta", "type": "actor", "info": "Vincent Vega in Pulp Fiction."}, {"id": "bw", "label": "Bruce Willis", "type": "actor", "info": "Butch Coolidge in Pulp Fiction."}, {"id": "pg", "label": "Pam Grier", "type": "actor", "bridge": true, "info": "Jackie Brown nel film omonimo; icona della blaxploitation (Coffy, Foxy Brown)."}, {"id": "rf", "label": "Robert Forster", "type": "actor", "info": "Max Cherry in Jackie Brown, con candidatura all'Oscar come non protagonista."}, {"id": "dc", "label": "David Carradine", "type": "actor", "info": "Bill in Kill Bill Vol.1 e Vol.2."}, {"id": "ll", "label": "Lucy Liu", "type": "actor", "info": "O-Ren Ishii in Kill Bill Vol.1."}, {"id": "dh", "label": "Daryl Hannah", "type": "actor", "info": "Elle Driver in Kill Bill."}, {"id": "kr", "label": "Kurt Russell", "type": "actor", "bridge": true, "info": "Stuntman Mike (Death Proof) e John Ruth (The Hateful Eight); protagonista anche di The Thing di John Carpenter."}, {"id": "bp", "label": "Brad Pitt", "type": "actor", "info": "Lt. Aldo Raine (Inglourious Basterds) e Cliff Booth (Once Upon a Time in Hollywood, Golden Globe come non protagonista)."}, {"id": "cw", "label": "Christoph Waltz", "type": "actor", "info": "Hans Landa (Inglourious Basterds) e Dr. King Schultz (Django Unchained): due Oscar come non protagonista."}, {"id": "mf", "label": "Michael Fassbender", "type": "actor", "info": "Archie Hicox in Inglourious Basterds."}, {"id": "jf", "label": "Jamie Foxx", "type": "actor", "info": "Django in Django Unchained."}, {"id": "ld", "label": "Leonardo DiCaprio", "type": "actor", "info": "Calvin Candie (Django Unchained) e Rick Dalton (Once Upon a Time in Hollywood)."}, {"id": "kw", "label": "Kerry Washington", "type": "actor", "info": "Broomhilda in Django Unchained."}, {"id": "wg", "label": "Walton Goggins", "type": "actor", "info": "Billy Crash (Django Unchained) e Chris Mannix (The Hateful Eight)."}, {"id": "jjl", "label": "Jennifer Jason Leigh", "type": "actor", "info": "Daisy Domergue in The Hateful Eight, con candidatura all'Oscar."}, {"id": "mr", "label": "Margot Robbie", "type": "actor", "info": "Sharon Tate in Once Upon a Time in Hollywood."}, {"id": "ap", "label": "Al Pacino", "type": "actor", "info": "Marvin Schwarz in Once Upon a Time in Hollywood."}, {"id": "chiba", "label": "Sonny Chiba", "type": "actor", "bridge": true, "info": "Hattori Hanzo in Kill Bill Vol.1, lo stesso personaggio che interpretava nella serie Shadow Warriors. Protagonista di The Street Fighter e Karate Kiba."}, {"id": "gliu", "label": "Gordon Liu", "type": "actor", "bridge": true, "info": "Star dei film Shaw Brothers (La 36a camera dello Shaolin). In Kill Bill e Johnny Mo nel Vol.1 e Pai Mei nel Vol.2."}, {"id": "nero", "label": "Franco Nero", "type": "actor", "bridge": true, "info": "Protagonista di Django (1966). Cameo in Django Unchained, nella scena del mandingo."}, {"id": "as", "label": "Andrzej Sekula", "type": "cinematographer", "info": "Direttore della fotografia di Le iene e Pulp Fiction."}, {"id": "gn", "label": "Guillermo Navarro", "type": "cinematographer", "info": "Direttore della fotografia di Jackie Brown; Oscar per Il labirinto del fauno."}, {"id": "rr", "label": "Robert Richardson", "type": "cinematographer", "info": "Direttore della fotografia di sei film di Tarantino, da Kill Bill a Once Upon a Time in Hollywood. Tre Oscar."}, {"id": "em", "label": "Ennio Morricone", "type": "composer", "bridge": true, "info": "Compositore (1928-2020). Musiche originali di The Hateful Eight (Oscar); suoi brani preesistenti compaiono in altri film di Tarantino."}, {"id": "rza", "label": "RZA", "type": "composer", "info": "Produttore hip-hop e fondatore del Wu-Tang Clan; musiche di Kill Bill Vol.1 e Vol.2."}, {"id": "lb", "label": "Lawrence Bender", "type": "producer", "info": "Produttore di sei film: Le iene, Pulp Fiction, Jackie Brown, Kill Bill Vol.1 e Vol.2, Inglourious Basterds."}, {"id": "sm", "label": "Shannon McIntosh", "type": "producer", "info": "Produttrice di The Hateful Eight e Once Upon a Time in Hollywood."}, {"id": "ra", "label": "Roger Avary", "type": "writer", "info": "Co-autore di Pulp Fiction (Oscar condiviso) e accreditato per il soggetto di Le iene."}, {"id": "x_ls", "label": "Lady Snowblood", "type": "inf_film", "year": 1973, "info": "Film di Toshiya Fujita con Meiko Kaji: una donna nata in carcere per vendicare la famiglia. Considerato il modello principale di Kill Bill."}, {"id": "x_god", "label": "Game of Death", "type": "inf_film", "year": 1978, "info": "Con Bruce Lee. La tuta gialla della Sposa riprende quella che Lee indossa nel film."}, {"id": "x_sf", "label": "The Street Fighter", "type": "inf_film", "year": 1974, "info": "Con Sonny Chiba. Le scene d'azione di Kill Bill ne ricordano lo stile."}, {"id": "x_kiba", "label": "Karate Kiba (The Bodyguard)", "type": "inf_film", "year": 1973, "info": "Con Sonny Chiba. Da qui viene il versetto di Ezechiele recitato da Jules in Pulp Fiction."}, {"id": "x_drh", "label": "Death Rides a Horse", "type": "inf_film", "year": 1967, "info": "Spaghetti western di Giulio Petroni con musiche di Morricone. Il suo tema e usato in Kill Bill; le fonti divergono sulla scena esatta."}, {"id": "x_sw", "label": "Switchblade Sisters", "type": "inf_film", "year": 1975, "info": "Tarantino ne ha curato la riedizione con la sua Rolling Thunder Pictures. La benda di Elle Driver e letta come omaggio al personaggio Patch."}, {"id": "x_tacp", "label": "Thriller: A Cruel Picture", "type": "inf_film", "year": 1973, "info": "Exploitation svedese. La benda di Elle Driver e letta come omaggio al film."}, {"id": "x_oupw", "label": "Once Upon a Time in the West", "type": "inf_film", "year": 1968, "info": "Di Sergio Leone. Il riferimento a Leone piu citato in Kill Bill, soprattutto nel Vol.2."}, {"id": "x_tsc", "label": "The 36th Chamber of Shaolin", "type": "inf_film", "year": 1978, "info": "Kung fu Shaw Brothers con Gordon Liu, poi scelto per interpretare Pai Mei."}, {"id": "x_sa", "label": "Shogun Assassin", "type": "inf_film", "year": 1980, "info": "Versione doppiata dei primi film di Lone Wolf and Cub. Nel Vol.2 e la visione della buonanotte di un personaggio."}, {"id": "x_bwb", "label": "The Bride Wore Black", "type": "inf_film", "year": 1968, "info": "Una donna si vendica di una banda di assassini. La critica lo accosta alla trama di Kill Bill."}, {"id": "x_cof", "label": "City on Fire", "type": "inf_film", "year": 1987, "info": "Di Ringo Lam: rapina finita male e poliziotto infiltrato. Il legame con Le iene e molto discusso; Tarantino non lo ha mai indicato come fonte diretta."}, {"id": "x_doulos", "label": "Le Doulos", "type": "inf_film", "year": 1962, "info": "Di Jean-Pierre Melville. Tarantino lo ha definito la sua sceneggiatura preferita di sempre."}, {"id": "x_sam", "label": "Le Samourai", "type": "inf_film", "year": 1967, "info": "Di Melville, tra i film preferiti di Tarantino; ha influenzato il mondo di Le iene e Pulp Fiction."}, {"id": "x_pel", "label": "The Taking of Pelham One Two Three", "type": "inf_film", "year": 1974, "info": "Qui compaiono per la prima volta i criminali con nomi in codice a colori, ripresi in Le iene."}, {"id": "x_bs", "label": "Black Sabbath", "type": "inf_film", "year": 1963, "info": "Antologia horror in tre episodi di Mario Bava: ispirazione iniziale della struttura di Pulp Fiction."}, {"id": "x_kmd", "label": "Kiss Me Deadly", "type": "inf_film", "year": 1955, "info": "Di Robert Aldrich, dal romanzo di Mickey Spillane. La valigetta misteriosa; Tarantino ha detto di aver ideato Butch pensando a Mike Hammer."}, {"id": "x_bap", "label": "Bande a part", "type": "inf_film", "year": 1964, "info": "Di Jean-Luc Godard. La scena di ballo ispira quella di Mia e Vincent; Tarantino ha chiamato A Band Apart la sua societa."}, {"id": "x_coffy", "label": "Coffy", "type": "inf_film", "year": 1973, "info": "Blaxploitation con Pam Grier, diretta da Jack Hill. Il poster di Jackie Brown ne richiama lo stile."}, {"id": "x_foxy", "label": "Foxy Brown", "type": "inf_film", "year": 1974, "info": "Blaxploitation con Pam Grier. Il cognome di Jackie Brown allude al film."}, {"id": "x_vp", "label": "Vanishing Point", "type": "inf_film", "year": 1971, "info": "Citato piu volte in Death Proof: Zoe cerca una Dodge Challenger bianca come quella del film."}, {"id": "x_dmcl", "label": "Dirty Mary, Crazy Larry", "type": "inf_film", "year": 1974, "info": "Di John Hough. La targa della Charger di Stuntman Mike e la stessa del film."}, {"id": "x_g60", "label": "Gone in 60 Seconds", "type": "inf_film", "year": 1974, "info": "Di H.B. Halicki. La Mustang gialla e lo scontro con la barca in Death Proof sono citazioni."}, {"id": "x_ib78", "label": "The Inglorious Bastards", "type": "inf_film", "year": 1978, "info": "Di Enzo G. Castellari. Ha dato il titolo (con l'ortografia modificata) al film di Tarantino, che non e un remake."}, {"id": "x_dd", "label": "The Dirty Dozen", "type": "inf_film", "year": 1967, "info": "Di Robert Aldrich. Secondo la critica, il modello del film di Castellari."}, {"id": "x_dj", "label": "Django", "type": "inf_film", "year": 1966, "info": "Di Sergio Corbucci con Franco Nero. Da qui vengono il titolo, il tema musicale e il carattere dei titoli di testa."}, {"id": "x_tgs", "label": "The Great Silence", "type": "inf_film", "year": 1968, "info": "Di Corbucci. Le scene nella neve di Django Unchained lo ricordano; i paralleli con The Hateful Eight non hanno attribuzione esplicita."}, {"id": "x_mc", "label": "Minnesota Clay", "type": "inf_film", "year": 1965, "info": "Di Corbucci. Il nome del saloon in Django Unchained."}, {"id": "x_hell", "label": "The Hellbenders", "type": "inf_film", "year": 1966, "info": "Di Corbucci. Un brano di Morricone tratto dal film e nella colonna sonora di Django Unchained."}, {"id": "x_mand", "label": "Mandingo", "type": "inf_film", "year": 1975, "info": "Di Richard Fleischer: schiavi addestrati a combattere tra loro. Ispira la trama dei mandingo fighter."}, {"id": "x_thing", "label": "The Thing", "type": "inf_film", "year": 1982, "info": "Di John Carpenter, con Kurt Russell. Tarantino ha detto che The Hateful Eight le deve piu che a qualsiasi western."}, {"id": "x_wrec", "label": "The Wrecking Crew", "type": "inf_film", "year": 1968, "info": "Di Phil Karlson, con Sharon Tate. Nel film di Tarantino Tate lo guarda al cinema."}, {"id": "x_rosemary", "label": "Rosemary's Baby", "type": "inf_film", "year": 1968, "info": "Di Roman Polanski, che nel film e il vicino di casa di Rick Dalton."}, {"id": "x_shadow", "label": "Shadow Warriors", "type": "inf_tv", "year": 1980, "info": "Serie TV giapponese, la preferita di Tarantino. Sonny Chiba vi interpretava Hattori Hanzo."}, {"id": "x_bonanza", "label": "Bonanza", "type": "inf_tv", "info": "Serie TV western; Tarantino la cita con Gunsmoke tra le influenze di The Hateful Eight."}, {"id": "x_wdoa", "label": "Wanted: Dead or Alive", "type": "inf_tv", "year": 1958, "info": "Serie con Steve McQueen. Probabile modello della serie fittizia Bounty Law."}, {"id": "x_blackmask", "label": "Black Mask", "type": "inf_lit", "info": "Rivista pulp hardboiled degli anni '20. Fu il titolo provvisorio del progetto di Tarantino e Avary da cui nacque Pulp Fiction."}, {"id": "x_glass", "label": "Racconti della famiglia Glass", "type": "inf_lit", "info": "Di J.D. Salinger. Tarantino li ha indicati come modello per la struttura a episodi collegati di Pulp Fiction."}, {"id": "x_rp", "label": "Rum Punch", "type": "inf_lit", "year": 1992, "info": "Romanzo di Elmore Leonard. Jackie Brown e l'unico film diretto da Tarantino tratto da un'opera preesistente."}, {"id": "x_tess", "label": "Tess dei d'Urberville", "type": "inf_lit", "info": "Romanzo di Thomas Hardy. Nel film, Sharon Tate lo compra in libreria per Polanski."}, {"id": "x_foc", "label": "Flower of Carnage", "type": "inf_music", "info": "Shura no Hana, cantata da Meiko Kaji. Accompagna la morte di O-Ren Ishii in Kill Bill Vol.1; e il tema di Lady Snowblood."}, {"id": "x_urami", "label": "Urami Bushi", "type": "inf_music", "info": "Canzone di Meiko Kaji da Female Convict Scorpion, nei titoli di coda di Kill Bill Vol.2."}, {"id": "x_ytnt", "label": "You Never Can Tell", "type": "inf_music", "info": "Di Chuck Berry. Accompagna il ballo di Mia e Vincent in Pulp Fiction."}, {"id": "x_coffyscore", "label": "Colonna sonora di Coffy", "type": "inf_music", "info": "Musiche di Roy Ayers. Diversi brani sono usati in Jackie Brown, anche nella rapina al centro commerciale."}, {"id": "x_across", "label": "Across 110th Street", "type": "inf_music", "info": "Di Bobby Womack, dal film omonimo. Accompagna l'ingresso di Jackie in Jackie Brown."}, {"id": "x_djtheme", "label": "Tema di Django", "type": "inf_music", "info": "Di Luis Bacalov. Apre Django Unchained, come nel film di Corbucci."}, {"id": "x_thingscore", "label": "Musiche non usate di The Thing", "type": "inf_music", "info": "Brani scritti da Morricone per The Thing e rimasti fuori dal film. Riutilizzati in The Hateful Eight, tra cui Eternity, Bestiality e Despair."}, {"id": "x_hush", "label": "Hush", "type": "inf_music", "info": "Dei Deep Purple. Accompagna l'auto di Polanski e Tate in Once Upon a Time in Hollywood."}, {"id": "x_fujita", "label": "Toshiya Fujita", "type": "inf_person", "info": "Regista di Lady Snowblood."}, {"id": "x_kaji", "label": "Meiko Kaji", "type": "inf_person", "info": "Attrice e cantante giapponese: protagonista di Lady Snowblood e Female Prisoner Scorpion. Due sue canzoni sono in Kill Bill."}, {"id": "x_petroni", "label": "Giulio Petroni", "type": "inf_person", "info": "Regista di Death Rides a Horse."}, {"id": "x_leone", "label": "Sergio Leone", "type": "inf_person", "info": "Regista di C'era una volta il West. Tarantino lo ricorda tra i suoi maestri nei titoli di coda di Kill Bill."}, {"id": "x_lam", "label": "Ringo Lam", "type": "inf_person", "info": "Regista hongkonghese di City on Fire, scomparso nel 2018."}, {"id": "x_melville", "label": "Jean-Pierre Melville", "type": "inf_person", "info": "Maestro del noir francese. Le Doulos e Le Samourai sono riferimenti dichiarati per Le iene."}, {"id": "x_bava", "label": "Mario Bava", "type": "inf_person", "info": "Regista italiano dell'horror. In Pulp Fiction Lance chiede a Vincent se vuole procurarsi un Bava."}, {"id": "x_aldrich", "label": "Robert Aldrich", "type": "inf_person", "info": "Regista di Kiss Me Deadly e The Dirty Dozen: collega due influenze diverse."}, {"id": "x_godard", "label": "Jean-Luc Godard", "type": "inf_person", "info": "Regista della Nouvelle Vague, autore di Bande a part."}, {"id": "x_salinger", "label": "J.D. Salinger", "type": "inf_person", "info": "Scrittore, autore dei racconti della famiglia Glass."}, {"id": "x_spillane", "label": "Mickey Spillane", "type": "inf_person", "info": "Scrittore di gialli hardboiled, autore del romanzo da cui e tratto Kiss Me Deadly."}, {"id": "x_leonard", "label": "Elmore Leonard", "type": "inf_person", "info": "Scrittore di romanzi crime, autore di Rum Punch."}, {"id": "x_hill", "label": "Jack Hill", "type": "inf_person", "info": "Regista di Coffy e Foxy Brown, con Pam Grier."}, {"id": "x_meyer", "label": "Russ Meyer", "type": "inf_person", "info": "Regista di exploitation. Le ragazze di Death Proof richiamano i suoi film."}, {"id": "x_castellari", "label": "Enzo G. Castellari", "type": "inf_person", "info": "Regista di The Inglorious Bastards. Ha un cameo come generale tedesco in Inglourious Basterds."}, {"id": "x_corbucci", "label": "Sergio Corbucci", "type": "inf_person", "info": "Regista di spaghetti western. Per Tarantino e la principale influenza di Django Unchained."}, {"id": "x_carpenter", "label": "John Carpenter", "type": "inf_person", "info": "Regista di The Thing e co-compositore della sua colonna sonora insieme a Morricone."}, {"id": "x_polanski", "label": "Roman Polanski", "type": "inf_person", "info": "Regista di Rosemary's Baby. Nel film di Tarantino compare come personaggio."}, {"id": "x_hardy", "label": "Thomas Hardy", "type": "inf_person", "info": "Scrittore inglese, autore di Tess dei d'Urberville."}], "links": [["qt", "rd", "directed"], ["qt", "pf", "directed"], ["qt", "jb", "directed"], ["qt", "kb1", "directed"], ["qt", "kb2", "directed"], ["qt", "dp", "directed"], ["qt", "ib", "directed"], ["qt", "du", "directed"], ["qt", "h8", "directed"], ["qt", "ouath", "directed"], ["slj", "pf", "acted"], ["slj", "jb", "acted"], ["slj", "kb2", "acted"], ["slj", "ib", "acted"], ["slj", "du", "acted"], ["slj", "h8", "acted"], ["hk", "rd", "acted"], ["hk", "pf", "acted"], ["tr", "rd", "acted"], ["tr", "pf", "acted"], ["tr", "h8", "acted"], ["mm", "rd", "acted"], ["mm", "kb1", "acted"], ["mm", "kb2", "acted"], ["mm", "h8", "acted"], ["mm", "ouath", "acted"], ["ut", "pf", "acted"], ["ut", "kb1", "acted"], ["ut", "kb2", "acted"], ["jt", "pf", "acted"], ["bw", "pf", "acted"], ["pg", "jb", "acted"], ["rf", "jb", "acted"], ["dc", "kb1", "acted"], ["dc", "kb2", "acted"], ["ll", "kb1", "acted"], ["dh", "kb1", "acted"], ["dh", "kb2", "acted"], ["kr", "dp", "acted"], ["kr", "h8", "acted"], ["bp", "ib", "acted"], ["bp", "ouath", "acted"], ["cw", "ib", "acted"], ["cw", "du", "acted"], ["mf", "ib", "acted"], ["jf", "du", "acted"], ["ld", "du", "acted"], ["ld", "ouath", "acted"], ["kw", "du", "acted"], ["wg", "du", "acted"], ["wg", "h8", "acted"], ["jjl", "h8", "acted"], ["mr", "ouath", "acted"], ["ap", "ouath", "acted"], ["chiba", "kb1", "acted"], ["gliu", "kb1", "acted"], ["gliu", "kb2", "acted"], ["nero", "du", "acted"], ["as", "rd", "shot"], ["as", "pf", "shot"], ["gn", "jb", "shot"], ["rr", "kb1", "shot"], ["rr", "kb2", "shot"], ["rr", "ib", "shot"], ["rr", "du", "shot"], ["rr", "h8", "shot"], ["rr", "ouath", "shot"], ["em", "h8", "scored"], ["rza", "kb1", "scored"], ["rza", "kb2", "scored"], ["lb", "rd", "produced"], ["lb", "pf", "produced"], ["lb", "jb", "produced"], ["lb", "kb1", "produced"], ["lb", "kb2", "produced"], ["lb", "ib", "produced"], ["sm", "h8", "produced"], ["sm", "ouath", "produced"], ["ra", "rd", "wrote"], ["ra", "pf", "wrote"], ["x_ls", "kb1", "inspired", "documentato", "Slashfilm", "https://www.slashfilm.com/1178418/movies-that-inspired-kill-bill"], ["x_foc", "kb1", "music", "documentato", "Slashfilm", "https://www.slashfilm.com/2028165/meiko-kaji-70s-japanese-action-star-quentin-tarantino-kill-bill-inspiration"], ["x_god", "kb1", "homage", "documentato", "Recorder", "https://www.recorderonline.com/news/cinema-styles-revenge-begins-in-kill-bill-vol-1/article_14bb5146-0f8a-11ee-8db5-4bb022bfd358.html"], ["x_sf", "kb1", "homage", "documentato", "Tokyo Weekender", "https://www.tokyoweekender.com/?p=268086"], ["x_shadow", "kb1", "homage", "documentato", "Tokyo Weekender", "https://www.tokyoweekender.com/?p=268086"], ["x_drh", "kb1", "music", "documentato", "Slashfilm", "https://www.slashfilm.com/1178418/movies-that-inspired-kill-bill"], ["x_drh", "kb2", "cites", "documentato", "BFI", "https://www.bfi.org.uk/films-tv-people/4ce2b89fafde8"], ["x_sw", "kb1", "homage", "critica", "Bands About Movies", "https://bandsaboutmovies.com/2019/03/22/37-movies-that-make-up-kill-bill/"], ["x_tacp", "kb1", "homage", "critica", "Bands About Movies", "https://bandsaboutmovies.com/2019/03/22/37-movies-that-make-up-kill-bill/"], ["x_bwb", "kb1", "inspired", "critica", "Asian Movie Pulse", "https://asianmoviepulse.com/2020/04/from-kung-fu-flicks-to-online-casinos-kill-bills-links-to-popular-culture/"], ["x_oupw", "kb2", "homage", "critica", "DVD Talk (da NYT)", "https://forum.dvdtalk.com/archive/t-358064.html"], ["x_tsc", "kb2", "homage", "documentato", "Mental Floss", "https://www.mentalfloss.com/article/58730/15-things-you-probably-didnt-know-about-kill-bill-vol-2"], ["x_sa", "kb2", "cites", "documentato", "DVD Talk (da NYT)", "https://forum.dvdtalk.com/archive/t-358064.html"], ["x_urami", "kb2", "music", "documentato", "Tokyo Weekender", "https://www.tokyoweekender.com/?p=268086"], ["x_cof", "rd", "inspired", "critica", "Screen Slate", "https://www.screenslate.com/articles/city-fire"], ["x_doulos", "rd", "inspired", "dichiarato", "LitReactor", "https://litreactor.com/columns/5-movies-that-influenced-quentin-tarantinos-reservoir-dogs"], ["x_sam", "rd", "inspired", "dichiarato", "Slashfilm", "https://slashfilm.com/765078/the-french-neo-noir-classic-that-inspired-reservoir-dogs"], ["x_pel", "rd", "homage", "documentato", "Wikipedia (mirror)", "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Mr._Blonde"], ["x_blackmask", "pf", "inspired", "dichiarato", "Far Out (intervista AFI)", "https://faroutmagazine.co.uk/quentin-tarantino-inspiration-behind-pulp-fiction/"], ["x_bs", "pf", "inspired", "documentato", "Frame Rated", "https://www.framerated.co.uk/pulp-fiction-1994/"], ["x_kmd", "pf", "homage", "dichiarato", "LitReactor (Sight & Sound)", "https://litreactor.com/columns/movies-and-books-that-influenced-quentin-tarantinos-pulp-fiction"], ["x_bap", "pf", "homage", "dichiarato", "Far Out", "https://faroutmagazine.co.uk/enduring-influence-of-jean-luc-godards-bande-a-part/"], ["x_glass", "pf", "inspired", "dichiarato", "LitReactor (intervista 1994)", "https://litreactor.com/columns/movies-and-books-that-influenced-quentin-tarantinos-pulp-fiction"], ["x_ytnt", "pf", "music", "documentato", "Screen Rant", "https://screenrant.com/pulp-fiction-quentin-tarantino-best-movie-references-ranked/"], ["x_kiba", "pf", "cites", "documentato", "Girls in Capes", "https://girlsincapes.com/2013/04/19/killbill"], ["x_rp", "jb", "adapted", "documentato", "Wikipedia", "https://www.wikipedia.com/wiki/Jackie_Brown"], ["x_coffy", "jb", "homage", "documentato", "Wikipedia", "https://www.wikipedia.com/wiki/Jackie_Brown"], ["x_foxy", "jb", "name", "documentato", "BAMF Style", "https://bamfstyle.com/2020/05/13/jackie-brown-pam-grier/amp/"], ["x_coffyscore", "jb", "music", "documentato", "Looper", "https://www.looper.com/798287/the-untold-truth-of-jackie-brown/"], ["x_across", "jb", "music", "documentato", "Music Musings", "https://www.musicmusingsandsuch.com/musicmusingsandsuch/2025/11/9/feature-needle-drops-and-scores-to-settle-scene-two-across-110th-street-jackie-brown-1997"], ["x_vp", "dp", "homage", "documentato", "The Film Stage", "https://thefilmstage.com/features/death-proof-and-quentin-tarantinos-thunderous-roar-of-total-cinematic-adrenaline/"], ["x_dmcl", "dp", "cites", "documentato", "Far Out", "https://faroutmagazine.co.uk/hard-action-film-quentin-tarantino-utterly-adores/"], ["x_g60", "dp", "cites", "documentato", "Hagerty", "https://www.hagerty.com/media/?p=6559"], ["x_meyer", "dp", "homage", "documentato", "Hagerty", "https://www.hagerty.com/media/?p=6559"], ["x_ib78", "ib", "name", "documentato", "A.V. Club", "https://www.avclub.com/the-inglorious-bastards-1798217493"], ["x_dd", "x_ib78", "chain", "critica", "A.V. Club", "https://www.avclub.com/the-inglorious-bastards-1798217493"], ["x_dj", "du", "name", "dichiarato", "Slashfilm", "https://slashfilm.com/856568/the-controversial-spaghetti-western-that-inspired-tarantinos-django-unchained"], ["x_tgs", "du", "homage", "documentato", "The Take", "https://the-take.com/read/how-does-adjango-unchaineda-pay-homage-to-other-westerns"], ["x_mc", "du", "homage", "documentato", "HeyUGuys", "https://www.heyuguys.com/a-guide-to-the-film-references-in-django-unchained"], ["x_mand", "du", "inspired", "documentato", "GradeSaver", "https://www.gradesaver.com/django-unchained"], ["x_djtheme", "du", "music", "documentato", "The Take", "https://the-take.com/read/how-does-adjango-unchaineda-pay-homage-to-other-westerns"], ["x_hell", "du", "music", "documentato", "Craig Skinner", "https://craigskinnerfilm.com/a-guide-to-the-film-references-in-django-unchained"], ["x_thing", "h8", "inspired", "dichiarato", "No Film School", "https://nofilmschool.com/hateful-eight-the-thing-inspiration"], ["x_thingscore", "h8", "music", "dichiarato", "JoBlo (Q&A al DGA)", "https://www.joblo.com/the-hateful-eight-features-unused-music-composed-for-the-thing-206/"], ["x_bonanza", "h8", "inspired", "dichiarato", "Craig Skinner", "https://www.craigskinnerfilm.com/a-guide-to-the-film-and-television-references-in-the-hateful-eight"], ["x_tgs", "h8", "homage", "interpretativo", "Craig Skinner", "https://www.craigskinnerfilm.com/a-guide-to-the-film-and-television-references-in-the-hateful-eight"], ["x_wdoa", "ouath", "inspired", "critica", "Den of Geek", "https://www.denofgeek.com/us/movies/282478/once-upon-a-time-in-hollywood-easter-eggs-references"], ["x_wrec", "ouath", "cites", "documentato", "Looper", "https://www.looper.com/159920/small-details-in-once-upon-a-time-in-hollywood-you-missed"], ["x_rosemary", "ouath", "cites", "documentato", "Den of Geek", "https://www.denofgeek.com/culture/once-upon-a-time-in-hollywood-easter-eggs-references/"], ["x_hush", "ouath", "music", "documentato", "Den of Geek", "https://www.denofgeek.com/culture/once-upon-a-time-in-hollywood-easter-eggs-references/"], ["x_tess", "ouath", "cites", "documentato", "Filmstarts", "https://www.filmstarts.de/nachrichten/18527475.html"], ["x_fujita", "x_ls", "created", "documentato", "Slashfilm", "https://www.slashfilm.com/1178418/movies-that-inspired-kill-bill"], ["x_kaji", "x_ls", "starred", "documentato", "Slashfilm", "https://www.slashfilm.com/2028165/meiko-kaji-70s-japanese-action-star-quentin-tarantino-kill-bill-inspiration"], ["x_kaji", "x_foc", "created", "documentato", "Slashfilm", "https://www.slashfilm.com/2028165/meiko-kaji-70s-japanese-action-star-quentin-tarantino-kill-bill-inspiration"], ["x_kaji", "x_urami", "created", "documentato", "Tokyo Weekender", "https://www.tokyoweekender.com/?p=268086"], ["chiba", "x_sf", "starred", "documentato", "Tokyo Weekender", "https://www.tokyoweekender.com/?p=268086"], ["chiba", "x_kiba", "starred", "documentato", "Girls in Capes", "https://girlsincapes.com/2013/04/19/killbill"], ["chiba", "x_shadow", "starred", "documentato", "Tokyo Weekender", "https://www.tokyoweekender.com/?p=268086"], ["gliu", "x_tsc", "starred", "documentato", "Mental Floss", "https://www.mentalfloss.com/article/58730/15-things-you-probably-didnt-know-about-kill-bill-vol-2"], ["x_petroni", "x_drh", "created", "documentato", "Slashfilm", "https://www.slashfilm.com/1178418/movies-that-inspired-kill-bill"], ["em", "x_drh", "created", "documentato", "AnOther", "https://www.anothermag.com/design-living/16823/the-films-that-inspired-kill-bill-quentin-tarantino"], ["em", "x_hell", "created", "documentato", "Craig Skinner", "https://craigskinnerfilm.com/a-guide-to-the-film-references-in-django-unchained"], ["em", "x_thingscore", "created", "documentato", "Wikipedia", "https://en.wikipedia.org/wiki/The_Thing_(1982_soundtrack)"], ["x_carpenter", "x_thing", "created", "documentato", "No Film School", "https://nofilmschool.com/hateful-eight-the-thing-inspiration"], ["x_carpenter", "x_thingscore", "created", "documentato", "Wikipedia", "https://en.wikipedia.org/wiki/The_Thing_(1982_soundtrack)"], ["kr", "x_thing", "starred", "documentato", "Rolling Stone", "https://www.rollingstone.com/music/music-news/ennio-morricone-goes-inside-hateful-eight-soundtrack-58788/2/"], ["x_leone", "x_oupw", "created", "documentato", "DVD Talk (da NYT)", "https://forum.dvdtalk.com/archive/t-358064.html"], ["x_lam", "x_cof", "created", "documentato", "Screen Slate", "https://www.screenslate.com/articles/city-fire"], ["x_melville", "x_doulos", "created", "documentato", "Slashfilm", "https://slashfilm.com/765078/the-french-neo-noir-classic-that-inspired-reservoir-dogs"], ["x_melville", "x_sam", "created", "documentato", "Slashfilm", "https://slashfilm.com/765078/the-french-neo-noir-classic-that-inspired-reservoir-dogs"], ["x_bava", "x_bs", "created", "documentato", "Frame Rated", "https://www.framerated.co.uk/pulp-fiction-1994/"], ["x_aldrich", "x_kmd", "created", "documentato", "SBS", "https://www.sbs.com.au/whats-on/article/pulp-fiction-is-still-one-bad-mfer-of-a-movie/8sjxr4hk7"], ["x_aldrich", "x_dd", "created", "documentato", "A.V. Club", "https://www.avclub.com/the-inglorious-bastards-1798217493"], ["x_spillane", "x_kmd", "created", "documentato", "SBS", "https://www.sbs.com.au/whats-on/article/pulp-fiction-is-still-one-bad-mfer-of-a-movie/8sjxr4hk7"], ["x_godard", "x_bap", "created", "documentato", "Far Out", "https://faroutmagazine.co.uk/enduring-influence-of-jean-luc-godards-bande-a-part/"], ["x_salinger", "x_glass", "created", "documentato", "LitReactor", "https://litreactor.com/columns/movies-and-books-that-influenced-quentin-tarantinos-pulp-fiction"], ["x_leonard", "x_rp", "created", "documentato", "Wikipedia", "https://www.wikipedia.com/wiki/Jackie_Brown"], ["x_hill", "x_coffy", "created", "documentato", "Press Play", "https://pressplayredux.com/2012/12/17/on-the-q-t-chapter-3-jackie-brown-quentin-and-pams-big-score"], ["x_hill", "x_foxy", "created", "documentato", "Press Play", "https://pressplayredux.com/2012/12/17/on-the-q-t-chapter-3-jackie-brown-quentin-and-pams-big-score"], ["pg", "x_coffy", "starred", "documentato", "Wikipedia", "https://www.wikipedia.com/wiki/Jackie_Brown"], ["pg", "x_foxy", "starred", "documentato", "Wikipedia", "https://www.wikipedia.com/wiki/Jackie_Brown"], ["x_castellari", "x_ib78", "created", "documentato", "Wikipedia", "https://en.wikipedia.org/wiki/Enzo_G._Castellari"], ["x_castellari", "ib", "cameo", "documentato", "Wikipedia", "https://en.wikipedia.org/wiki/Enzo_G._Castellari"], ["x_corbucci", "x_dj", "created", "documentato", "The Take", "https://the-take.com/read/how-does-adjango-unchaineda-pay-homage-to-other-westerns"], ["x_corbucci", "x_tgs", "created", "documentato", "The Take", "https://the-take.com/read/how-does-adjango-unchaineda-pay-homage-to-other-westerns"], ["x_corbucci", "x_mc", "created", "documentato", "HeyUGuys", "https://www.heyuguys.com/a-guide-to-the-film-references-in-django-unchained"], ["x_corbucci", "x_hell", "created", "documentato", "Craig Skinner", "https://craigskinnerfilm.com/a-guide-to-the-film-references-in-django-unchained"], ["nero", "x_dj", "starred", "documentato", "The Take", "https://the-take.com/read/how-does-adjango-unchaineda-pay-homage-to-other-westerns"], ["x_polanski", "x_rosemary", "created", "documentato", "Den of Geek", "https://www.denofgeek.com/culture/once-upon-a-time-in-hollywood-easter-eggs-references/"], ["x_hardy", "x_tess", "created", "documentato", "Filmstarts", "https://www.filmstarts.de/nachrichten/18527475.html"]]};
+const INFL_RELS=['inspired','homage','cites','music','adapted','name','chain'];
+const CREATOR_RELS=['created','starred','cameo'];
+const TYPES={
+ director:['Regista','#d97706','c'],movie:['Film','#0d9488','c'],actor:['Attori','#7c3aed','c'],
+ cinematographer:['Fotografia','#2563eb','c'],composer:['Compositori','#db2777','c'],producer:['Produttori','#ea580c','c'],writer:['Sceneggiatori','#16a34a','c'],
+ inf_film:['Film ispiratori','#dc2626','s'],inf_music:['Musica','#0891b2','d'],inf_lit:['Letteratura','#65a30d','t'],inf_tv:['Serie TV','#64748b','w'],inf_person:['Registi e autori','#a8a29e','c']
+};
+const CREDIT_TYPES=['director','movie','actor','cinematographer','composer','producer','writer'];
+const INFL_TYPES=['inf_film','inf_music','inf_lit','inf_tv','inf_person'];
+const CONFS=[['dichiarato','Dichiarato da Tarantino'],['documentato','Documentato (fonte esterna)'],['critica','Letto dalla critica'],['interpretativo','Interpretativo']];
+const RELT={directed:['ha diretto','diretto da'],acted:['recita in','con'],shot:['fotografia per','fotografia di'],scored:['musiche per','musiche di'],produced:['ha prodotto','prodotto da'],wrote:['ha scritto','scritto da'],
+ inspired:['ha ispirato','ispirato da'],homage:['omaggiato in','omaggia'],cites:['citato in','cita'],music:['brano in','usa il brano'],adapted:['adattato in','tratto da'],name:['dà il nome a','prende il nome da'],chain:['ha ispirato','ispirato da'],
+ created:['ha creato','creato da'],starred:['interprete in','interpretato da'],cameo:['cameo in','cameo di']};
+const DASH={dichiarato:null,documentato:null,critica:'6 4',interpretativo:'2 3'};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const byId=new Map(D.nodes.map(n=>[n.id,n]));
+const ALL=D.links.map((a,i)=>({key:i,sid:a[0],tid:a[1],source:a[0],target:a[1],rel:a[2],conf:a[3]||null,src:a[4]||null,url:a[5]||null}));
+let nav='explore',expanded=new Set(),focus=null,depth=1,trail=[],fullLinks=[],fullVis=new Set(),hid={};
+let mode='all',typeOn=new Set(Object.keys(TYPES)),confOn=new Set(CONFS.map(c=>c[0])),sel=null,hover=null,visSet=new Set(),visLinks=[];
+
+function computeFull(){
+ const base=n=>{
+  if(!typeOn.has(n.type))return false;
+  if(n.type==='director'||n.type==='movie')return true;
+  if(mode==='credits')return CREDIT_TYPES.includes(n.type);
+  if(mode==='infl')return INFL_TYPES.includes(n.type)||!!n.bridge;
+  return true;};
+ const cand=D.nodes.filter(base),cid=new Set(cand.map(n=>n.id));
+ const A=new Set(cand.filter(n=>n.type==='director'||n.type==='movie').map(n=>n.id));
+ const L=ALL.filter(l=>INFL_RELS.includes(l.rel)&&confOn.has(l.conf)&&cid.has(l.sid)&&cid.has(l.tid));
+ for(let ch=true;ch;){ch=false;for(const l of L)if(A.has(l.tid)&&!A.has(l.sid)){A.add(l.sid);ch=true;}}
+ const vis=new Set();
+ for(const n of cand){
+  const t=n.type;
+  if(t==='director'||t==='movie')vis.add(n.id);
+  else if(INFL_TYPES.includes(t)&&t!=='inf_person'){if(mode!=='credits'&&A.has(n.id))vis.add(n.id);}
+  else if(t==='inf_person'||(n.bridge&&mode==='infl')){
+   if(ALL.some(l=>(CREATOR_RELS.includes(l.rel)||INFL_RELS.includes(l.rel))&&confOn.has(l.conf)&&l.sid===n.id&&A.has(l.tid)&&cid.has(l.tid)))vis.add(n.id);
+  } else vis.add(n.id);
+ }
+ const vl=ALL.filter(l=>{
+  if(!vis.has(l.sid)||!vis.has(l.tid))return false;
+  if(l.conf&&!confOn.has(l.conf))return false;
+  if(!l.conf&&mode==='infl'&&l.rel!=='directed'&&!byId.get(l.sid).bridge)return false;
+  return true;});
+ const nodes=D.nodes.filter(n=>vis.has(n.id));
+ nodes.forEach(n=>n.deg=0);vl.forEach(l=>{byId.get(l.sid).deg++;byId.get(l.tid).deg++;});
+ return{nodes,links:vl,vis};
+}
+function compute(){
+ const f=computeFull();fullLinks=f.links;fullVis=f.vis;
+ const adj=new Map();f.vis.forEach(id=>adj.set(id,[]));
+ f.links.forEach(l=>{adj.get(l.sid).push(l.tid);adj.get(l.tid).push(l.sid);});
+ let shown;
+ if(nav==='full')shown=new Set(f.vis);
+ else{
+  if(focus&&!f.vis.has(focus)){focus=null;trail=[];}
+  shown=new Set();
+  if(focus){let fr=[focus];shown.add(focus);for(let i=0;i<depth;i++){const nx=[];fr.forEach(id=>adj.get(id).forEach(x=>{if(!shown.has(x)){shown.add(x);nx.push(x);}}));fr=nx;}}
+  else{
+   D.nodes.forEach(n=>{if((n.type==='director'||n.type==='movie')&&f.vis.has(n.id))shown.add(n.id);});
+   for(let ch=true;ch;){ch=false;for(const e of expanded)if(shown.has(e))for(const x of adj.get(e)||[])if(!shown.has(x)){shown.add(x);ch=true;}}
+  }
+ }
+ const nodes=D.nodes.filter(n=>shown.has(n.id));
+ const links=f.links.filter(l=>shown.has(l.sid)&&shown.has(l.tid));
+ nodes.forEach(n=>n.deg=0);links.forEach(l=>{byId.get(l.sid).deg++;byId.get(l.tid).deg++;});
+ hid={};nodes.forEach(n=>{const c=(adj.get(n.id)||[]).filter(x=>!shown.has(x)).length;if(c)hid[n.id]=c;});
+ return{nodes,links,vis:shown};
+}
+
+const svg=d3.select('#svg'),root=svg.append('g'),gL=root.append('g'),gN=root.append('g');
+const zoom=d3.zoom().scaleExtent([.15,5]).on('zoom',e=>{root.attr('transform',e.transform);updLabels();});
+svg.call(zoom).on('dblclick.zoom',null);
+const sim=d3.forceSimulation().force('link',d3.forceLink().id(d=>d.id).distance(l=>INFL_RELS.includes(l.rel)?55:70).strength(.45))
+ .force('charge',d3.forceManyBody().strength(-200).distanceMax(420)).force('collide',d3.forceCollide().radius(d=>nodeR(d)+6))
+ .force('x',d3.forceX().strength(.035)).force('y',d3.forceY().strength(.035));
+const lf=sim.force('link');
+function nodeR(n){return n.type==='director'?17:n.type==='movie'?12:Math.min(10,4.5+Math.sqrt(n.deg||1)*1.5);}
+function pathFor(n){
+ const r=nodeR(n),sh=TYPES[n.type][2];
+ if(sh==='c')return d3.symbol(d3.symbolCircle,Math.PI*r*r)();
+ const m={s:d3.symbolSquare,d:d3.symbolDiamond,t:d3.symbolTriangle,w:d3.symbolWye}[sh];
+ return d3.symbol(m,r*r*(sh==='d'?3.4:3.8))();
+}
+function size(){const b=document.getElementById('stage').getBoundingClientRect();return[b.width,b.height];}
+function showLabel(d){
+ const k=d3.zoomTransform(svg.node()).k;
+ if(nav!=='full'&&visSet.size<=45)return true;
+ if(d===sel||d===hover||(sel&&nbrs(sel).has(d.id))||(hover&&nbrs(hover).has(d.id)))return true;
+ if(d.type==='director'||d.type==='movie')return true;
+ return k>1.5||d.deg>=3&&k>.7;
+}
+function nbrs(n){const s=new Set([n.id]);visLinks.forEach(l=>{if(l.sid===n.id)s.add(l.tid);if(l.tid===n.id)s.add(l.sid);});return s;}
+
+let nodeSel,linkSel;
+function update(refit=true,alpha=.9){
+ const {nodes,links,vis}=compute();visSet=vis;visLinks=links;
+ D.nodes.forEach(n=>{if(!vis.has(n.id)){n.x=undefined;n.y=undefined;n.vx=0;n.vy=0;n.fx=null;n.fy=null;}});
+ nodes.forEach(n=>{if(n.x===undefined){
+   const l=links.find(l=>(l.sid===n.id||l.tid===n.id)&&byId.get(l.sid===n.id?l.tid:l.sid).x!==undefined);
+   const o=l?byId.get(l.sid===n.id?l.tid:l.sid):null;
+   n.x=(o?o.x:0)+(Math.random()-.5)*40;n.y=(o?o.y:0)+(Math.random()-.5)*40;}});
+ links.forEach(l=>{l.source=l.sid;l.target=l.tid;});
+ sim.nodes(nodes);lf.links(links);
+ linkSel=gL.selectAll('line').data(links,l=>l.key).join('line').attr('class','link')
+  .attr('stroke-width',l=>l.conf==='dichiarato'?2.2:INFL_RELS.includes(l.rel)?1.4:1)
+  .attr('stroke-dasharray',l=>l.conf?DASH[l.conf]:null)
+  .attr('stroke',l=>INFL_RELS.includes(l.rel)?'#dc2626':CREATOR_RELS.includes(l.rel)?'#0891b2':null)
+  .attr('stroke-opacity',l=>l.conf?.75:.55);
+ nodeSel=gN.selectAll('g.n').data(nodes,d=>d.id).join(en=>{
+   const g=en.append('g').attr('class','n').style('cursor','pointer');
+   g.append('path');g.append('text').attr('class','lb').attr('text-anchor','middle');g.append('text').attr('class','bd');return g;})
+  .on('click',(e,d)=>{e.stopPropagation();
+   if(nav==='explore'){
+    if(focus){if(d.id!==focus)goFocus(d.id);}
+    else if(d.type!=='director'&&(hid[d.id]||expanded.has(d.id))){expanded.has(d.id)?expanded.delete(d.id):expanded.add(d.id);update(true,.6);}
+   }
+   select(d);})
+  .on('mouseenter',(e,d)=>{hover=d;paint();}).on('mouseleave',()=>{hover=null;paint();})
+  .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y;})
+   .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+ nodeSel.select('path').attr('d',pathFor).attr('fill',d=>TYPES[d.type][1]).attr('stroke',d=>d.bridge?'#fbbf24':'var(--bg)').attr('stroke-width',d=>d.bridge?2.5:1.5);
+ nodeSel.select('text.lb').text(d=>d.label+(d.year?' ('+d.year+')':'')).attr('dy',d=>nodeR(d)+12);
+ nodeSel.select('text.bd').text(d=>hid[d.id]?'+'+hid[d.id]:'').attr('dx',d=>nodeR(d)+4).attr('dy',4);
+ if(sel&&!vis.has(sel.id)){sel=null;document.getElementById('ip').style.display='none';}
+ paint();updStats();updCounts();renderBar();
+ sim.alpha(alpha).restart();if(refit)setTimeout(fit,1300);
+}
+function paint(){
+ const q=document.getElementById('q').value.trim().toLowerCase();
+ const f=hover||sel,nb=f?nbrs(f):null;
+ nodeSel.classed('dim',d=>(nb&&!nb.has(d.id))||(q&&!d.label.toLowerCase().includes(q)&&!nb));
+ linkSel.classed('dim',l=>nb&&!(l.sid===f.id||l.tid===f.id));
+ if(q)nodeSel.classed('dim',d=>!d.label.toLowerCase().includes(q));
+ updLabels();
+}
+function updLabels(){if(nodeSel)nodeSel.select('text.lb').style('display',d=>showLabel(d)?null:'none');}
+sim.on('tick',()=>{
+ linkSel.attr('x1',l=>l.source.x).attr('y1',l=>l.source.y).attr('x2',l=>l.target.x).attr('y2',l=>l.target.y);
+ nodeSel.attr('transform',d=>`translate(${d.x},${d.y})`);
+});
+function fit(){
+ const ns=sim.nodes();if(!ns.length)return;
+ const [w,h]=size();const x0=d3.min(ns,d=>d.x),x1=d3.max(ns,d=>d.x),y0=d3.min(ns,d=>d.y),y1=d3.max(ns,d=>d.y);
+ const k=Math.min(1.1,.88/Math.max((x1-x0)/w,(y1-y0)/h,.01));
+ const t=d3.zoomIdentity.translate(w/2-k*(x0+x1)/2,h/2-k*(y0+y1)/2).scale(k);
+ svg.transition().duration(500).call(zoom.transform,t);
+}
+svg.on('click',()=>{sel=null;document.getElementById('ip').style.display='none';paint();});
+
+function select(d){
+ sel=d;paint();
+ const ip=document.getElementById('ip'),T=TYPES[d.type];
+ const items=fullLinks.filter(l=>l.sid===d.id||l.tid===d.id).map(l=>{
+  const out=l.sid===d.id,o=byId.get(out?l.tid:l.sid);
+  return`<li${visSet.has(o.id)?'':' class="hid"'}><span class="rt">${RELT[l.rel][out?0:1]}</span> <a class="go" data-id="${o.id}">${esc(o.label)}</a>${o.year?' <span class="rt">('+o.year+')</span>':''}${o.bridge?' <span class="cf">ponte</span>':''}`+
+   (l.conf?`<span class="cf">${l.conf}</span>`:'')+(l.url?`<span class="src">Fonte: <a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.src)}</a></span>`:'')+'</li>';}).join('');
+ const act=nav==='full'||focus===d.id?'':'<div class="act"><button data-a="focus">Focus su questo nodo</button>'+(expanded.has(d.id)?'<button data-a="col">Comprimi</button>':'')+'</div>';
+ ip.innerHTML=`<button class="x" aria-label="Chiudi">×</button><span class="pill" style="background:${T[1]}">${T[0]}</span>${d.bridge?' <span class="pill" style="background:#f59e0b">ponte crediti ↔ influenze</span>':''}
+  <h3>${esc(d.label)}${d.year?' <span style="color:var(--mut);font-weight:400">('+d.year+')</span>':''}</h3><p>${esc(d.info||'')}</p>
+  <div style="color:var(--mut);font-size:12px">${fullLinks.filter(l=>l.sid===d.id||l.tid===d.id).length} collegamenti${hid[d.id]?' · '+hid[d.id]+' nascosti':''}</div>${act}<ul>${items}</ul>`;
+ ip.style.display='block';
+ ip.querySelector('.x').onclick=()=>{sel=null;ip.style.display='none';paint();};
+ ip.querySelectorAll('a.go').forEach(a=>a.onclick=()=>{const n=byId.get(a.dataset.id);if(!n)return;
+  if(focus)goFocus(n.id);else if(!visSet.has(n.id)){expanded.add(d.id);update(true,.6);}
+  select(n);});
+ ip.querySelectorAll('.act button').forEach(b=>b.onclick=()=>{
+  if(b.dataset.a==='focus'){goFocus(d.id);select(d);}
+  else{expanded.delete(d.id);update(true,.6);select(d);}});
+}
+
+function goFocus(id,push=true){focus=id;if(push&&trail[trail.length-1]!==id)trail.push(id);update(true);}
+function exitFocus(){focus=null;trail=[];update(true);}
+function renderBar(){
+ const fb=document.getElementById('fb');
+ if(!focus||nav==='full'){fb.style.display='none';return;}
+ fb.style.display='flex';
+ fb.innerHTML=`<button data-a="back" ${trail.length<2?'disabled':''}>←</button><span class="crumbs">`+trail.map((id,i)=>`<a data-i="${i}" class="${i===trail.length-1?'cur':''}">${esc(byId.get(id).label)}</a>`).join(' › ')+`</span><span>Salti <button data-d="1" class="${depth===1?'on':''}">1</button> <button data-d="2" class="${depth===2?'on':''}">2</button></span><button data-a="exit">Esci dal focus</button>`;
+ fb.onclick=e=>{const x=e.target;
+  if(x.dataset.a==='back'&&trail.length>1){trail.pop();goFocus(trail[trail.length-1],false);}
+  else if(x.dataset.a==='exit')exitFocus();
+  else if(x.dataset.d){depth=+x.dataset.d;update(true);}
+  else if(x.dataset.i!==undefined){trail=trail.slice(0,+x.dataset.i+1);goFocus(trail[trail.length-1],false);}};
+}
+function hint(){document.getElementById('navhint').textContent=nav==='explore'?'Clicca un nodo per aprirlo o chiuderlo. «+n» = collegamenti ancora nascosti. Dal pannello puoi fare Focus.':'Tutto il grafo visibile insieme, come nella v2.';}
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{nav=b.dataset.n;focus=null;trail=[];document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));hint();update(true);});
+document.getElementById('collapse').onclick=()=>{expanded.clear();focus=null;trail=[];update(true);};
+hint();
+function shapeSvg(t){
+ const c=TYPES[t][1],s=TYPES[t][2];
+ const p={c:'<circle cx="7" cy="7" r="5.5"/>',s:'<rect x="1.5" y="1.5" width="11" height="11"/>',d:'<path d="M7 0.5L13.5 7L7 13.5L0.5 7Z"/>',t:'<path d="M7 1L13 12.5H1Z"/>',w:'<path d="M5.5 1h3v4.5L13 8.2l-1.5 2.6L7 8.2 2.5 10.8 1 8.2l4.5-2.7z"/>'}[s];
+ return`<svg width="14" height="14" viewBox="0 0 14 14" fill="${c}">${p}</svg>`;
+}
+const tot={};D.nodes.forEach(n=>tot[n.type]=(tot[n.type]||0)+1);
+function buildChips(el,types){
+ el.innerHTML=types.map(t=>`<div class="chip" data-t="${t}">${shapeSvg(t)}<span>${TYPES[t][0]}</span><span class="n">${tot[t]||0}</span></div>`).join('');
+ el.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const t=c.dataset.t;typeOn.has(t)?typeOn.delete(t):typeOn.add(t);c.classList.toggle('off',!typeOn.has(t));update();});
+}
+buildChips(document.getElementById('tc'),CREDIT_TYPES);buildChips(document.getElementById('ti'),INFL_TYPES);
+document.getElementById('cf').innerHTML=CONFS.map(([k,l])=>{
+ const d=DASH[k];return`<div class="chip" data-c="${k}"><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="#dc2626" stroke-width="${k==='dichiarato'?2.4:1.5}" ${d?`stroke-dasharray="${d}"`:''}/></svg><span>${l}</span></div>`;}).join('');
+document.querySelectorAll('#cf .chip').forEach(c=>c.onclick=()=>{const k=c.dataset.c;confOn.has(k)?confOn.delete(k):confOn.add(k);c.classList.toggle('off',!confOn.has(k));update();});
+document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('#mode button').forEach(x=>x.classList.toggle('on',x===b));update();});
+function updStats(){document.getElementById('stats').textContent=`${visSet.size} nodi visibili (su ${fullVis.size}) · ${visLinks.length} collegamenti`;}
+function updCounts(){}
+const qi=document.getElementById('q');
+qi.oninput=()=>{paint();const q=qi.value.trim().toLowerCase();if(q){const m=sim.nodes().find(d=>d.label.toLowerCase().includes(q));if(m)select(m);}};
+qi.onkeydown=e=>{if(e.key!=='Enter')return;const q=qi.value.trim().toLowerCase();if(!q)return;
+ const m=D.nodes.find(d=>fullVis.has(d.id)&&d.label.toLowerCase().includes(q));
+ if(m&&!visSet.has(m.id)){if(nav==='explore')goFocus(m.id);qi.value='';select(m);}};
+document.getElementById('fit').onclick=fit;
+document.getElementById('theme').onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dark?'light':'dark';};
+window.addEventListener('resize',fit);
+update();
+</script>
+</body>
+</html>

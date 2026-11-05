@@ -45,7 +45,7 @@ input[type=search]{width:100%;padding:6px 8px;border:1px solid var(--bd);border-
 .link{stroke:var(--link)}
 text.lb{font-size:11px;fill:var(--tx);paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
 .dim{opacity:.1}
-.ver{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden;margin-bottom:6px}.ver a{flex:1;text-align:center;padding:5px 0;color:var(--mut);text-decoration:none;font-size:12.5px}.ver a+a{border-left:1px solid var(--bd)}.ver a.on{background:var(--hov);color:var(--tx);font-weight:600}.vd{font-size:11px;color:var(--mut);margin-bottom:12px;line-height:1.35}
+.ver{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden;margin-bottom:6px}.ver a{flex:1;text-align:center;padding:5px 2px;white-space:nowrap;color:var(--mut);text-decoration:none;font-size:12.5px}.ver a+a{border-left:1px solid var(--bd)}.ver a.on{background:var(--hov);color:var(--tx);font-weight:600}.vd{font-size:11px;color:var(--mut);margin-bottom:12px;line-height:1.35}
 
 @media (max-width:760px){#app{flex-direction:column}#side{width:100%;height:42vh;border-right:0;border-bottom:1px solid var(--bd)}#ip{width:calc(100% - 32px)}}
 </style>
@@ -53,8 +53,8 @@ text.lb{font-size:11px;fill:var(--tx);paint-order:stroke;stroke:var(--bg);stroke
 <body>
 <div id="app">
  <aside id="side">
-  <div class="ver"><a href="v2.html" class="on">v2 · Completo</a><a href="index.html">v3 · Esplora</a></div>
-  <div class="vd">v2: tutto il grafo con filtri · v3: navigazione progressiva (apri / focus)</div>
+  <div class="ver"><a href="v2.html" class="on">v2 · Tutto</a><a href="v3.html">v3 · Esplora</a><a href="index.html">v4 · Registi</a></div>
+  <div class="vd">v2 tutto con filtri · v3 apri e focus · v4 registi e riferimenti a più livelli</div>
   <h1>Tarantino · influenze</h1>
   <div class="sub">Crediti dei film + cinema, musica, letteratura e TV che li hanno ispirati</div>
   <input id="q" type="search" placeholder="Cerca un nodo…">
