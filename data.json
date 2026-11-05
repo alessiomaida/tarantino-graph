@@ -724,7 +724,8 @@
    "label": "Toshiya Fujita",
    "type": "director",
    "info": "Regista di Lady Snowblood.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_kaji",
@@ -738,7 +739,8 @@
    "label": "Giulio Petroni",
    "type": "director",
    "info": "Regista di Death Rides a Horse.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_leone",
@@ -753,7 +755,8 @@
    "label": "Ringo Lam",
    "type": "director",
    "info": "Regista hongkonghese di City on Fire, scomparso nel 2018.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_melville",
@@ -813,21 +816,24 @@
    "label": "Jack Hill",
    "type": "director",
    "info": "Regista di Coffy e Foxy Brown, con Pam Grier.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_meyer",
    "label": "Russ Meyer",
    "type": "director",
    "info": "Regista di exploitation. Le ragazze di Death Proof richiamano i suoi film.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_castellari",
    "label": "Enzo G. Castellari",
    "type": "director",
    "info": "Regista di The Inglorious Bastards. Ha un cameo come generale tedesco in Inglourious Basterds.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_corbucci",
@@ -850,7 +856,8 @@
    "label": "Roman Polanski",
    "type": "director",
    "info": "Regista di Rosemary's Baby. Nel film di Tarantino compare come personaggio.",
-   "layer": "i"
+   "layer": "i",
+   "jump": true
   },
   {
    "id": "x_hardy",
@@ -1710,6 +1717,1461 @@
    "info": "Considerato il successore tematico di Terrore nello spazio.",
    "year": 1979,
    "layer": "i"
+  },
+  {
+   "id": "f_keoma",
+   "label": "Keoma",
+   "type": "movie",
+   "year": 1976,
+   "ext": true,
+   "layer": "i",
+   "info": "Western italiano di Enzo G. Castellari con Franco Nero."
+  },
+  {
+   "id": "f_ls2",
+   "label": "Lady Snowblood 2: Love Song of Vengeance",
+   "type": "movie",
+   "year": 1974,
+   "ext": true,
+   "layer": "i",
+   "info": "Seguito di Lady Snowblood, ancora con Meiko Kaji."
+  },
+  {
+   "id": "f_chinatown",
+   "label": "Chinatown",
+   "type": "movie",
+   "year": 1974,
+   "ext": true,
+   "layer": "i",
+   "info": "Noir di Roman Polanski, sceneggiatura di Robert Towne."
+  },
+  {
+   "id": "f_tess",
+   "label": "Tess",
+   "type": "movie",
+   "year": 1979,
+   "ext": true,
+   "layer": "i",
+   "info": "Film di Roman Polanski tratto dal romanzo di Thomas Hardy."
+  },
+  {
+   "id": "f_fvk",
+   "label": "Per favore, non mordermi sul collo! (The Fearless Vampire Killers)",
+   "type": "movie",
+   "year": 1967,
+   "ext": true,
+   "layer": "i",
+   "info": "Commedia horror di Polanski, con Sharon Tate."
+  },
+  {
+   "id": "f_fpkk",
+   "label": "Faster, Pussycat! Kill! Kill!",
+   "type": "movie",
+   "year": 1965,
+   "ext": true,
+   "layer": "i",
+   "info": "Di Russ Meyer. Nel Death Proof di Tarantino un personaggio indossa una maglietta di Varla; il film ringrazia Meyer nei titoli di coda."
+  },
+  {
+   "id": "f_pierrot",
+   "label": "Il bandito delle ore undici (Pierrot le Fou)",
+   "type": "movie",
+   "year": 1965,
+   "ext": true,
+   "layer": "i",
+   "info": "Di Jean-Luc Godard, con Belmondo e Anna Karina; Samuel Fuller appare in un cameo."
+  },
+  {
+   "id": "f_ghostdog",
+   "label": "Ghost Dog – Il codice del samurai",
+   "type": "movie",
+   "year": 1999,
+   "ext": true,
+   "layer": "i",
+   "info": "Di Jim Jarmusch; il finale omaggia Le Samouraï."
+  },
+  {
+   "id": "f_drive",
+   "label": "Drive",
+   "type": "movie",
+   "year": 2011,
+   "ext": true,
+   "layer": "i",
+   "info": "Di Nicolas Winding Refn; il protagonista ricorda Jef Costello di Le Samouraï."
+  },
+  {
+   "id": "f_killer23",
+   "label": "The Killer (2023)",
+   "type": "movie",
+   "year": 2023,
+   "ext": true,
+   "layer": "i",
+   "info": "Di David Fincher, ispirato al personaggio di Delon in Le Samouraï."
+  },
+  {
+   "id": "f_killer24",
+   "label": "The Killer (2024)",
+   "type": "movie",
+   "year": 2024,
+   "ext": true,
+   "layer": "i",
+   "info": "Remake di John Woo, ambientato a Parigi come tributo a Le Samouraï."
+  },
+  {
+   "id": "f_bird",
+   "label": "L'uccello dalle piume di cristallo",
+   "type": "movie",
+   "year": 1970,
+   "ext": true,
+   "layer": "i",
+   "info": "Di Dario Argento; prende elementi da Sei donne per l'assassino di Bava."
+  },
+  {
+   "id": "f_kundun",
+   "label": "Kundun",
+   "type": "movie",
+   "year": 1997,
+   "ext": true,
+   "layer": "i",
+   "info": "Di Martin Scorsese; secondo Wikipedia imita l'omicidio nella vasca di Sei donne per l'assassino."
+  },
+  {
+   "id": "f_burning",
+   "label": "The Burning",
+   "type": "movie",
+   "year": 1981,
+   "ext": true,
+   "layer": "i",
+   "info": "Slasher del 1981 che segue l'esempio di Reazione a catena."
+  },
+  {
+   "id": "f_scream",
+   "label": "Scream",
+   "type": "movie",
+   "year": 1996,
+   "ext": true,
+   "layer": "i",
+   "info": "Slasher citato tra i discendenti dello stile a conteggio di vittime di Reazione a catena."
+  },
+  {
+   "id": "f_lsmanga",
+   "label": "Lady Snowblood (manga)",
+   "type": "comic",
+   "year": 0,
+   "ext": true,
+   "layer": "i",
+   "info": "Manga di Kazuo Koike e Kazuo Kamimura da cui è tratto il film di Fujita."
+  },
+  {
+   "id": "f_dd_novel",
+   "label": "The Dirty Dozen (romanzo)",
+   "type": "lit",
+   "year": 1965,
+   "ext": true,
+   "layer": "i",
+   "info": "Romanzo di E. M. Nathanson da cui è tratto il film di Aldrich."
+  },
+  {
+   "id": "f_kmd_novel",
+   "label": "Kiss Me, Deadly (romanzo)",
+   "type": "lit",
+   "year": 1952,
+   "ext": true,
+   "layer": "i",
+   "info": "Romanzo di Mickey Spillane da cui è tratto il film di Aldrich."
+  },
+  {
+   "id": "f_rb_novel",
+   "label": "Rosemary's Baby (romanzo)",
+   "type": "lit",
+   "year": 1967,
+   "ext": true,
+   "layer": "i",
+   "info": "Romanzo di Ira Levin da cui è tratto il film di Polanski."
+  },
+  {
+   "id": "f_obsession",
+   "label": "Obsession (romanzo)",
+   "type": "lit",
+   "year": 1962,
+   "ext": true,
+   "layer": "i",
+   "info": "Romanzo di Lionel White alla base di Pierrot le Fou."
+  },
+  {
+   "id": "f_fools",
+   "label": "Fools' Gold (romanzo)",
+   "type": "lit",
+   "year": 1958,
+   "ext": true,
+   "layer": "i",
+   "info": "Romanzo di Dolores Hitchens alla base di Bande à part."
+  },
+  {
+   "id": "f_lesou",
+   "label": "Le Doulos (romanzo)",
+   "type": "lit",
+   "year": 0,
+   "ext": true,
+   "layer": "i",
+   "info": "Romanzo di Pierre Lesou da cui è tratto il film di Melville."
+  },
+  {
+   "id": "m_bsband",
+   "label": "Black Sabbath (gruppo)",
+   "type": "music",
+   "year": 0,
+   "ext": true,
+   "layer": "i",
+   "info": "Gruppo heavy metal inglese: ha preso il nome dal film di Bava, dopo aver cambiato il nome Earth."
+  },
+  {
+   "id": "p_sandro_continenza",
+   "label": "Sandro Continenza",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_sergio_grieco",
+   "label": "Sergio Grieco",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_bo_svenson",
+   "label": "Bo Svenson",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_peter_hooten",
+   "label": "Peter Hooten",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_fred_williamson",
+   "label": "Fred Williamson",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_michael_pergolani",
+   "label": "Michael Pergolani",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jackie_basehart",
+   "label": "Jackie Basehart",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_mino_roli",
+   "label": "Mino Roli",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_nico_ducci",
+   "label": "Nico Ducci",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_luigi_montefiori",
+   "label": "Luigi Montefiori",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_william_berger",
+   "label": "William Berger",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_olga_karlatos",
+   "label": "Olga Karlatos",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_woody_strode",
+   "label": "Woody Strode",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_orso_maria_guerrini",
+   "label": "Orso Maria Guerrini",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_kazuo_koike",
+   "label": "Kazuo Koike",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_kazuo_kamimura",
+   "label": "Kazuo Kamimura",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_norio_osada",
+   "label": "Norio Osada",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_toshio_kurosawa",
+   "label": "Toshio Kurosawa",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_masaaki_daimon",
+   "label": "Masaaki Daimon",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_miyoko_akaza",
+   "label": "Miyoko Akaza",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_ko_nishimura",
+   "label": "Kō Nishimura",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_kiyohide_ohara",
+   "label": "Kiyohide Ohara",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_juzo_itami",
+   "label": "Juzo Itami",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_kazuko_yoshiyuki",
+   "label": "Kazuko Yoshiyuki",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_yoshio_harada",
+   "label": "Yoshio Harada",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_shin_kishida",
+   "label": "Shin Kishida",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_luciano_vincenzoni",
+   "label": "Luciano Vincenzoni",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_john_phillip_law",
+   "label": "John Phillip Law",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_luigi_pistilli",
+   "label": "Luigi Pistilli",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_anthony_dawson",
+   "label": "Anthony Dawson",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jose_torres",
+   "label": "José Torres",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_e_m_nathanson",
+   "label": "E. M. Nathanson",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_nunnally_johnson",
+   "label": "Nunnally Johnson",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_lukas_heller",
+   "label": "Lukas Heller",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_lee_marvin",
+   "label": "Lee Marvin",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_ernest_borgnine",
+   "label": "Ernest Borgnine",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jim_brown",
+   "label": "Jim Brown",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_john_cassavetes",
+   "label": "John Cassavetes",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_richard_jaeckel",
+   "label": "Richard Jaeckel",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_a_i_bezzerides",
+   "label": "A. I. Bezzerides",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_ralph_meeker",
+   "label": "Ralph Meeker",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_albert_dekker",
+   "label": "Albert Dekker",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_paul_stewart",
+   "label": "Paul Stewart",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_juano_hernandez",
+   "label": "Juano Hernández",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_wesley_addy",
+   "label": "Wesley Addy",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_lionel_white",
+   "label": "Lionel White",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_anna_karina",
+   "label": "Anna Karina",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_graziella_galvani",
+   "label": "Graziella Galvani",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_dirk_sanders",
+   "label": "Dirk Sanders",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_roger_dutoit",
+   "label": "Roger Dutoit",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_samuel_fuller",
+   "label": "Samuel Fuller",
+   "type": "director",
+   "ext": true,
+   "layer": "i",
+   "info": "Regista."
+  },
+  {
+   "id": "p_dolores_hitchens",
+   "label": "Dolores Hitchens",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_sami_frey",
+   "label": "Sami Frey",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_claude_brasseur",
+   "label": "Claude Brasseur",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_daniele_girard",
+   "label": "Danièle Girard",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_booker_bradshaw",
+   "label": "Booker Bradshaw",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_robert_doqui",
+   "label": "Robert DoQui",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_william_elliott",
+   "label": "William Elliott",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_allan_arbus",
+   "label": "Allan Arbus",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_peter_brown",
+   "label": "Peter Brown",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_terry_carter",
+   "label": "Terry Carter",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_kathryn_loder",
+   "label": "Kathryn Loder",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_harry_holcombe",
+   "label": "Harry Holcombe",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_f_x_maier",
+   "label": "F. X. Maier",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_robbie_lee",
+   "label": "Robbie Lee",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_joanne_nail",
+   "label": "Joanne Nail",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_monica_gayle",
+   "label": "Monica Gayle",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_asher_brauner",
+   "label": "Asher Brauner",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_chase_newhart",
+   "label": "Chase Newhart",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jack_moran",
+   "label": "Jack Moran",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_tura_satana",
+   "label": "Tura Satana",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_haji",
+   "label": "Haji",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_lori_williams",
+   "label": "Lori Williams",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_susan_bernard",
+   "label": "Susan Bernard",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_stuart_lancaster",
+   "label": "Stuart Lancaster",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_tommy_sham",
+   "label": "Tommy Sham",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_chow_yun_fat",
+   "label": "Chow Yun-fat",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_danny_lee",
+   "label": "Danny Lee",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_sun_yueh",
+   "label": "Sun Yueh",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_carrie_ng",
+   "label": "Carrie Ng",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_roy_cheung",
+   "label": "Roy Cheung",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_ira_levin",
+   "label": "Ira Levin",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_mia_farrow",
+   "label": "Mia Farrow",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_ruth_gordon",
+   "label": "Ruth Gordon",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_sidney_blackmer",
+   "label": "Sidney Blackmer",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_maurice_evans",
+   "label": "Maurice Evans",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_krzysztof_komeda",
+   "label": "Krzysztof Komeda",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
+  },
+  {
+   "id": "p_robert_towne",
+   "label": "Robert Towne",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_jack_nicholson",
+   "label": "Jack Nicholson",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_faye_dunaway",
+   "label": "Faye Dunaway",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_john_huston",
+   "label": "John Huston",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_perry_lopez",
+   "label": "Perry Lopez",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_john_hillerman",
+   "label": "John Hillerman",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jerry_goldsmith",
+   "label": "Jerry Goldsmith",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
+  },
+  {
+   "id": "p_gerard_brach",
+   "label": "Gérard Brach",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_john_brownjohn",
+   "label": "John Brownjohn",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_nastassja_kinski",
+   "label": "Nastassja Kinski",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_peter_firth",
+   "label": "Peter Firth",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_leigh_lawson",
+   "label": "Leigh Lawson",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_john_collin",
+   "label": "John Collin",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_rosemary_martin",
+   "label": "Rosemary Martin",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jack_macgowran",
+   "label": "Jack MacGowran",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_sharon_tate",
+   "label": "Sharon Tate",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_alfie_bass",
+   "label": "Alfie Bass",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_ferdy_mayne",
+   "label": "Ferdy Mayne",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_bruno_corbucci",
+   "label": "Bruno Corbucci",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_franco_rossetti",
+   "label": "Franco Rossetti",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_loredana_nusciak",
+   "label": "Loredana Nusciak",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jose_bodalo",
+   "label": "José Bódalo",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_angel_alvarez",
+   "label": "Ángel Álvarez",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_eduardo_fajardo",
+   "label": "Eduardo Fajardo",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_luis_bacalov",
+   "label": "Luis Bacalov",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
+  },
+  {
+   "id": "p_vittoriano_petrilli",
+   "label": "Vittoriano Petrilli",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_mario_amendola",
+   "label": "Mario Amendola",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_jean_louis_trintignant",
+   "label": "Jean-Louis Trintignant",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_klaus_kinski",
+   "label": "Klaus Kinski",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_frank_wolff",
+   "label": "Frank Wolff",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_mario_brega",
+   "label": "Mario Brega",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_georges_pellegrin",
+   "label": "Georges Pellegrin",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_francois_perier",
+   "label": "François Périer",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_nathalie_delon",
+   "label": "Nathalie Delon",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_cathy_rosier",
+   "label": "Cathy Rosier",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jacques_leroy",
+   "label": "Jacques Leroy",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_francois_de_roubaix",
+   "label": "François de Roubaix",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
+  },
+  {
+   "id": "p_jim_jarmusch",
+   "label": "Jim Jarmusch",
+   "type": "director",
+   "ext": true,
+   "layer": "i",
+   "info": "Regista."
+  },
+  {
+   "id": "c_refn",
+   "label": "Nicolas Winding Refn",
+   "type": "director",
+   "ext": true,
+   "layer": "i",
+   "info": "Regista."
+  },
+  {
+   "id": "p_david_fincher",
+   "label": "David Fincher",
+   "type": "director",
+   "ext": true,
+   "layer": "i",
+   "info": "Regista."
+  },
+  {
+   "id": "p_pierre_lesou",
+   "label": "Pierre Lesou",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_serge_reggiani",
+   "label": "Serge Reggiani",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_jean_desailly",
+   "label": "Jean Desailly",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_rene_lefevre",
+   "label": "René Lefèvre",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_marcel_cuvelier",
+   "label": "Marcel Cuvelier",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_bourvil",
+   "label": "Bourvil",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_yves_montand",
+   "label": "Yves Montand",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_eric_demarsan",
+   "label": "Éric Demarsan",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
+  },
+  {
+   "id": "p_marcello_fondato",
+   "label": "Marcello Fondato",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_giuseppe_barilla",
+   "label": "Giuseppe Barillà",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_eva_bartok",
+   "label": "Eva Bartok",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_cameron_mitchell",
+   "label": "Cameron Mitchell",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_thomas_reiner",
+   "label": "Thomas Reiner",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_claude_dantes",
+   "label": "Claude Dantes",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_dante_dipaolo",
+   "label": "Dante DiPaolo",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_carlo_rustichelli",
+   "label": "Carlo Rustichelli",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
+  },
+  {
+   "id": "p_alberto_bevilacqua",
+   "label": "Alberto Bevilacqua",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_boris_karloff",
+   "label": "Boris Karloff",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_mark_damon",
+   "label": "Mark Damon",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_michele_mercier",
+   "label": "Michèle Mercier",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_susy_andersen",
+   "label": "Susy Andersen",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_lydia_alfonsi",
+   "label": "Lydia Alfonsi",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_giuseppe_zaccariello",
+   "label": "Giuseppe Zaccariello",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_filippo_ottoni",
+   "label": "Filippo Ottoni",
+   "type": "writer",
+   "ext": true,
+   "layer": "i",
+   "info": "Autore/sceneggiatore."
+  },
+  {
+   "id": "p_claudine_auger",
+   "label": "Claudine Auger",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_claudio_volonte",
+   "label": "Claudio Volonté",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_anna_m_rosati",
+   "label": "Anna M. Rosati",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_laura_betti",
+   "label": "Laura Betti",
+   "type": "actor",
+   "ext": true,
+   "layer": "i",
+   "info": "Attore/attrice."
+  },
+  {
+   "id": "p_stelvio_cipriani",
+   "label": "Stelvio Cipriani",
+   "type": "composer",
+   "ext": true,
+   "layer": "i",
+   "info": "Compositore."
   }
  ],
  "links": [
@@ -3984,6 +5446,1718 @@
    "documentato",
    "Wikipedia (Bava)",
    "https://en.wikipedia.org/wiki/Mario_Bava"
+  ],
+  [
+   "p_sandro_continenza",
+   "x_ib78",
+   "wrote",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_sergio_grieco",
+   "x_ib78",
+   "wrote",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_bo_svenson",
+   "x_ib78",
+   "starred",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_peter_hooten",
+   "x_ib78",
+   "starred",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_fred_williamson",
+   "x_ib78",
+   "starred",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_michael_pergolani",
+   "x_ib78",
+   "starred",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_jackie_basehart",
+   "x_ib78",
+   "starred",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "x_castellari",
+   "f_keoma",
+   "created",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_mino_roli",
+   "f_keoma",
+   "wrote",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_nico_ducci",
+   "f_keoma",
+   "wrote",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_luigi_montefiori",
+   "f_keoma",
+   "wrote",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "nero",
+   "f_keoma",
+   "starred",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_william_berger",
+   "f_keoma",
+   "starred",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_olga_karlatos",
+   "f_keoma",
+   "starred",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_woody_strode",
+   "f_keoma",
+   "starred",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_orso_maria_guerrini",
+   "f_keoma",
+   "starred",
+   "documentato",
+   "Wikipedia (Keoma)",
+   "https://en.wikipedia.org/wiki/Keoma_(film)"
+  ],
+  [
+   "p_bo_svenson",
+   "ib",
+   "cameo",
+   "documentato",
+   "Wikipedia (The Inglorious Bastards)",
+   "https://en.wikipedia.org/wiki/The_Inglorious_Bastards"
+  ],
+  [
+   "p_woody_strode",
+   "x_oupw",
+   "starred",
+   "documentato",
+   "Wikipedia (C'era una volta il West)",
+   "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_the_West"
+  ],
+  [
+   "f_lsmanga",
+   "x_ls",
+   "adapted",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_kazuo_koike",
+   "f_lsmanga",
+   "created",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_kazuo_kamimura",
+   "f_lsmanga",
+   "created",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_norio_osada",
+   "x_ls",
+   "wrote",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_toshio_kurosawa",
+   "x_ls",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_masaaki_daimon",
+   "x_ls",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_miyoko_akaza",
+   "x_ls",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "p_ko_nishimura",
+   "x_ls",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood_(film)"
+  ],
+  [
+   "x_fujita",
+   "f_ls2",
+   "created",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_norio_osada",
+   "f_ls2",
+   "wrote",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_kiyohide_ohara",
+   "f_ls2",
+   "wrote",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "x_kaji",
+   "f_ls2",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_juzo_itami",
+   "f_ls2",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_kazuko_yoshiyuki",
+   "f_ls2",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_yoshio_harada",
+   "f_ls2",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_shin_kishida",
+   "f_ls2",
+   "starred",
+   "documentato",
+   "Wikipedia (Lady Snowblood: Love Song of Vengeance)",
+   "https://en.wikipedia.org/wiki/Lady_Snowblood:_Love_Song_of_Vengeance"
+  ],
+  [
+   "p_luciano_vincenzoni",
+   "x_drh",
+   "wrote",
+   "documentato",
+   "Wikipedia (Death Rides a Horse)",
+   "https://en.wikipedia.org/wiki/Death_Rides_a_Horse"
+  ],
+  [
+   "c_lvc",
+   "x_drh",
+   "starred",
+   "documentato",
+   "Wikipedia (Death Rides a Horse)",
+   "https://en.wikipedia.org/wiki/Death_Rides_a_Horse"
+  ],
+  [
+   "p_john_phillip_law",
+   "x_drh",
+   "starred",
+   "documentato",
+   "Wikipedia (Death Rides a Horse)",
+   "https://en.wikipedia.org/wiki/Death_Rides_a_Horse"
+  ],
+  [
+   "p_luigi_pistilli",
+   "x_drh",
+   "starred",
+   "documentato",
+   "Wikipedia (Death Rides a Horse)",
+   "https://en.wikipedia.org/wiki/Death_Rides_a_Horse"
+  ],
+  [
+   "p_anthony_dawson",
+   "x_drh",
+   "starred",
+   "documentato",
+   "Wikipedia (Death Rides a Horse)",
+   "https://en.wikipedia.org/wiki/Death_Rides_a_Horse"
+  ],
+  [
+   "p_jose_torres",
+   "x_drh",
+   "starred",
+   "documentato",
+   "Wikipedia (Death Rides a Horse)",
+   "https://en.wikipedia.org/wiki/Death_Rides_a_Horse"
+  ],
+  [
+   "f_dd_novel",
+   "x_dd",
+   "adapted",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_e_m_nathanson",
+   "f_dd_novel",
+   "created",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_nunnally_johnson",
+   "x_dd",
+   "wrote",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_lukas_heller",
+   "x_dd",
+   "wrote",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_lee_marvin",
+   "x_dd",
+   "starred",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_ernest_borgnine",
+   "x_dd",
+   "starred",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "c_bronson",
+   "x_dd",
+   "starred",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_jim_brown",
+   "x_dd",
+   "starred",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_john_cassavetes",
+   "x_dd",
+   "starred",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "p_richard_jaeckel",
+   "x_dd",
+   "starred",
+   "documentato",
+   "Wikipedia (The Dirty Dozen)",
+   "https://en.wikipedia.org/wiki/The_Dirty_Dozen"
+  ],
+  [
+   "f_kmd_novel",
+   "x_kmd",
+   "adapted",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "x_spillane",
+   "f_kmd_novel",
+   "created",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "p_a_i_bezzerides",
+   "x_kmd",
+   "wrote",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "p_ralph_meeker",
+   "x_kmd",
+   "starred",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "p_albert_dekker",
+   "x_kmd",
+   "starred",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "p_paul_stewart",
+   "x_kmd",
+   "starred",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "p_juano_hernandez",
+   "x_kmd",
+   "starred",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "p_wesley_addy",
+   "x_kmd",
+   "starred",
+   "documentato",
+   "Wikipedia (Kiss Me Deadly)",
+   "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"
+  ],
+  [
+   "x_godard",
+   "f_pierrot",
+   "created",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "f_obsession",
+   "f_pierrot",
+   "adapted",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "p_lionel_white",
+   "f_obsession",
+   "created",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "x_godard",
+   "f_pierrot",
+   "wrote",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "c_belmondo",
+   "f_pierrot",
+   "starred",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "p_anna_karina",
+   "f_pierrot",
+   "starred",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "p_graziella_galvani",
+   "f_pierrot",
+   "starred",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "p_dirk_sanders",
+   "f_pierrot",
+   "starred",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "p_roger_dutoit",
+   "f_pierrot",
+   "starred",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "p_samuel_fuller",
+   "f_pierrot",
+   "cameo",
+   "documentato",
+   "Wikipedia (Pierrot le Fou)",
+   "https://en.wikipedia.org/wiki/Pierrot_le_Fou"
+  ],
+  [
+   "f_fools",
+   "x_bap",
+   "adapted",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "p_dolores_hitchens",
+   "f_fools",
+   "created",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "x_godard",
+   "x_bap",
+   "wrote",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "p_anna_karina",
+   "x_bap",
+   "starred",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "p_sami_frey",
+   "x_bap",
+   "starred",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "p_claude_brasseur",
+   "x_bap",
+   "starred",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "p_daniele_girard",
+   "x_bap",
+   "starred",
+   "documentato",
+   "Wikipedia (Bande à part)",
+   "https://en.wikipedia.org/wiki/Bande_%C3%A0_part_(film)"
+  ],
+  [
+   "x_hill",
+   "x_coffy",
+   "wrote",
+   "documentato",
+   "Wikipedia (Coffy)",
+   "https://en.wikipedia.org/wiki/Coffy"
+  ],
+  [
+   "p_booker_bradshaw",
+   "x_coffy",
+   "starred",
+   "documentato",
+   "Wikipedia (Coffy)",
+   "https://en.wikipedia.org/wiki/Coffy"
+  ],
+  [
+   "p_robert_doqui",
+   "x_coffy",
+   "starred",
+   "documentato",
+   "Wikipedia (Coffy)",
+   "https://en.wikipedia.org/wiki/Coffy"
+  ],
+  [
+   "p_william_elliott",
+   "x_coffy",
+   "starred",
+   "documentato",
+   "Wikipedia (Coffy)",
+   "https://en.wikipedia.org/wiki/Coffy"
+  ],
+  [
+   "p_allan_arbus",
+   "x_coffy",
+   "starred",
+   "documentato",
+   "Wikipedia (Coffy)",
+   "https://en.wikipedia.org/wiki/Coffy"
+  ],
+  [
+   "x_hill",
+   "x_foxy",
+   "wrote",
+   "documentato",
+   "Wikipedia (Foxy Brown)",
+   "https://en.wikipedia.org/wiki/Foxy_Brown_(film)"
+  ],
+  [
+   "p_peter_brown",
+   "x_foxy",
+   "starred",
+   "documentato",
+   "Wikipedia (Foxy Brown)",
+   "https://en.wikipedia.org/wiki/Foxy_Brown_(film)"
+  ],
+  [
+   "p_terry_carter",
+   "x_foxy",
+   "starred",
+   "documentato",
+   "Wikipedia (Foxy Brown)",
+   "https://en.wikipedia.org/wiki/Foxy_Brown_(film)"
+  ],
+  [
+   "p_kathryn_loder",
+   "x_foxy",
+   "starred",
+   "documentato",
+   "Wikipedia (Foxy Brown)",
+   "https://en.wikipedia.org/wiki/Foxy_Brown_(film)"
+  ],
+  [
+   "p_harry_holcombe",
+   "x_foxy",
+   "starred",
+   "documentato",
+   "Wikipedia (Foxy Brown)",
+   "https://en.wikipedia.org/wiki/Foxy_Brown_(film)"
+  ],
+  [
+   "p_f_x_maier",
+   "x_sw",
+   "wrote",
+   "documentato",
+   "Wikipedia (Switchblade Sisters)",
+   "https://en.wikipedia.org/wiki/Switchblade_Sisters"
+  ],
+  [
+   "p_robbie_lee",
+   "x_sw",
+   "starred",
+   "documentato",
+   "Wikipedia (Switchblade Sisters)",
+   "https://en.wikipedia.org/wiki/Switchblade_Sisters"
+  ],
+  [
+   "p_joanne_nail",
+   "x_sw",
+   "starred",
+   "documentato",
+   "Wikipedia (Switchblade Sisters)",
+   "https://en.wikipedia.org/wiki/Switchblade_Sisters"
+  ],
+  [
+   "p_monica_gayle",
+   "x_sw",
+   "starred",
+   "documentato",
+   "Wikipedia (Switchblade Sisters)",
+   "https://en.wikipedia.org/wiki/Switchblade_Sisters"
+  ],
+  [
+   "p_asher_brauner",
+   "x_sw",
+   "starred",
+   "documentato",
+   "Wikipedia (Switchblade Sisters)",
+   "https://en.wikipedia.org/wiki/Switchblade_Sisters"
+  ],
+  [
+   "p_chase_newhart",
+   "x_sw",
+   "starred",
+   "documentato",
+   "Wikipedia (Switchblade Sisters)",
+   "https://en.wikipedia.org/wiki/Switchblade_Sisters"
+  ],
+  [
+   "x_meyer",
+   "f_fpkk",
+   "created",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_jack_moran",
+   "f_fpkk",
+   "wrote",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_tura_satana",
+   "f_fpkk",
+   "starred",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_haji",
+   "f_fpkk",
+   "starred",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_lori_williams",
+   "f_fpkk",
+   "starred",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_susan_bernard",
+   "f_fpkk",
+   "starred",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_stuart_lancaster",
+   "f_fpkk",
+   "starred",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "f_fpkk",
+   "dp",
+   "cites",
+   "documentato",
+   "Wikipedia (Faster, Pussycat! Kill! Kill!)",
+   "https://en.wikipedia.org/wiki/Faster,_Pussycat!_Kill!_Kill!"
+  ],
+  [
+   "p_tommy_sham",
+   "x_cof",
+   "wrote",
+   "documentato",
+   "Wikipedia (City on Fire)",
+   "https://en.wikipedia.org/wiki/City_on_Fire_(1987_film)"
+  ],
+  [
+   "p_chow_yun_fat",
+   "x_cof",
+   "starred",
+   "documentato",
+   "Wikipedia (City on Fire)",
+   "https://en.wikipedia.org/wiki/City_on_Fire_(1987_film)"
+  ],
+  [
+   "p_danny_lee",
+   "x_cof",
+   "starred",
+   "documentato",
+   "Wikipedia (City on Fire)",
+   "https://en.wikipedia.org/wiki/City_on_Fire_(1987_film)"
+  ],
+  [
+   "p_sun_yueh",
+   "x_cof",
+   "starred",
+   "documentato",
+   "Wikipedia (City on Fire)",
+   "https://en.wikipedia.org/wiki/City_on_Fire_(1987_film)"
+  ],
+  [
+   "p_carrie_ng",
+   "x_cof",
+   "starred",
+   "documentato",
+   "Wikipedia (City on Fire)",
+   "https://en.wikipedia.org/wiki/City_on_Fire_(1987_film)"
+  ],
+  [
+   "p_roy_cheung",
+   "x_cof",
+   "starred",
+   "documentato",
+   "Wikipedia (City on Fire)",
+   "https://en.wikipedia.org/wiki/City_on_Fire_(1987_film)"
+  ],
+  [
+   "f_rb_novel",
+   "x_rosemary",
+   "adapted",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_ira_levin",
+   "f_rb_novel",
+   "created",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_mia_farrow",
+   "x_rosemary",
+   "starred",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_john_cassavetes",
+   "x_rosemary",
+   "starred",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_ruth_gordon",
+   "x_rosemary",
+   "starred",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_sidney_blackmer",
+   "x_rosemary",
+   "starred",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_maurice_evans",
+   "x_rosemary",
+   "starred",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "p_krzysztof_komeda",
+   "x_rosemary",
+   "scored",
+   "documentato",
+   "Wikipedia (Rosemary's Baby)",
+   "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)"
+  ],
+  [
+   "x_polanski",
+   "f_chinatown",
+   "created",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_robert_towne",
+   "f_chinatown",
+   "wrote",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_jack_nicholson",
+   "f_chinatown",
+   "starred",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_faye_dunaway",
+   "f_chinatown",
+   "starred",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_john_huston",
+   "f_chinatown",
+   "starred",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_perry_lopez",
+   "f_chinatown",
+   "starred",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_john_hillerman",
+   "f_chinatown",
+   "starred",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "p_jerry_goldsmith",
+   "f_chinatown",
+   "scored",
+   "documentato",
+   "Wikiwand (Chinatown)",
+   "https://wikiwand.com/en/articles/Chinatown_(1974_film)"
+  ],
+  [
+   "x_polanski",
+   "f_tess",
+   "created",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "x_tess",
+   "f_tess",
+   "adapted",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_gerard_brach",
+   "f_tess",
+   "wrote",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_john_brownjohn",
+   "f_tess",
+   "wrote",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_nastassja_kinski",
+   "f_tess",
+   "starred",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_peter_firth",
+   "f_tess",
+   "starred",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_leigh_lawson",
+   "f_tess",
+   "starred",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_john_collin",
+   "f_tess",
+   "starred",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "p_rosemary_martin",
+   "f_tess",
+   "starred",
+   "documentato",
+   "Wikipedia (Tess)",
+   "https://en.wikipedia.org/wiki/Tess_(1979_film)"
+  ],
+  [
+   "x_polanski",
+   "f_fvk",
+   "created",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "p_gerard_brach",
+   "f_fvk",
+   "wrote",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "p_jack_macgowran",
+   "f_fvk",
+   "starred",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "x_polanski",
+   "f_fvk",
+   "starred",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "p_sharon_tate",
+   "f_fvk",
+   "starred",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "p_alfie_bass",
+   "f_fvk",
+   "starred",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "p_ferdy_mayne",
+   "f_fvk",
+   "starred",
+   "documentato",
+   "Wikipedia (The Fearless Vampire Killers)",
+   "https://en.wikipedia.org/wiki/The_Fearless_Vampire_Killers"
+  ],
+  [
+   "p_sharon_tate",
+   "ouath",
+   "cites",
+   "documentato",
+   "Looper",
+   "https://www.looper.com/159920/small-details-in-once-upon-a-time-in-hollywood-you-missed"
+  ],
+  [
+   "p_bruno_corbucci",
+   "x_dj",
+   "wrote",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_franco_rossetti",
+   "x_dj",
+   "wrote",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_loredana_nusciak",
+   "x_dj",
+   "starred",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_jose_bodalo",
+   "x_dj",
+   "starred",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_angel_alvarez",
+   "x_dj",
+   "starred",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_eduardo_fajardo",
+   "x_dj",
+   "starred",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_luis_bacalov",
+   "x_dj",
+   "scored",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_luis_bacalov",
+   "x_djtheme",
+   "created",
+   "documentato",
+   "The Take",
+   "https://the-take.com/read/how-does-adjango-unchaineda-pay-homage-to-other-westerns"
+  ],
+  [
+   "l_fod",
+   "x_dj",
+   "inspired",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "l_yoj",
+   "x_dj",
+   "adapted",
+   "documentato",
+   "Wikipedia (Django)",
+   "https://en.wikipedia.org/wiki/Django_(1966_film)"
+  ],
+  [
+   "p_vittoriano_petrilli",
+   "x_tgs",
+   "wrote",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_mario_amendola",
+   "x_tgs",
+   "wrote",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_bruno_corbucci",
+   "x_tgs",
+   "wrote",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_jean_louis_trintignant",
+   "x_tgs",
+   "starred",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_klaus_kinski",
+   "x_tgs",
+   "starred",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_frank_wolff",
+   "x_tgs",
+   "starred",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_luigi_pistilli",
+   "x_tgs",
+   "starred",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_mario_brega",
+   "x_tgs",
+   "starred",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "em",
+   "x_tgs",
+   "scored",
+   "documentato",
+   "Wikipedia (Il grande silenzio)",
+   "https://en.wikipedia.org/wiki/The_Great_Silence"
+  ],
+  [
+   "p_georges_pellegrin",
+   "x_sam",
+   "wrote",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_francois_perier",
+   "x_sam",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_nathalie_delon",
+   "x_sam",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_cathy_rosier",
+   "x_sam",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_jacques_leroy",
+   "x_sam",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_francois_de_roubaix",
+   "x_sam",
+   "scored",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "x_sam",
+   "f_ghostdog",
+   "inspired",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_jim_jarmusch",
+   "f_ghostdog",
+   "created",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "x_sam",
+   "f_drive",
+   "inspired",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "c_refn",
+   "f_drive",
+   "created",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "x_sam",
+   "f_killer23",
+   "inspired",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "p_david_fincher",
+   "f_killer23",
+   "created",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "x_sam",
+   "f_killer24",
+   "homage",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "c_woo",
+   "f_killer24",
+   "created",
+   "documentato",
+   "Wikipedia (Le Samouraï)",
+   "https://en.wikipedia.org/wiki/Le_Samoura%C3%AF"
+  ],
+  [
+   "x_carpenter",
+   "c_refn",
+   "inspired",
+   "documentato",
+   "Wikipedia (Carpenter)",
+   "https://en.wikipedia.org/wiki/John_Carpenter"
+  ],
+  [
+   "x_bava",
+   "c_refn",
+   "inspired",
+   "documentato",
+   "Wikipedia (Bava)",
+   "https://en.wikipedia.org/wiki/Mario_Bava"
+  ],
+  [
+   "f_lesou",
+   "x_doulos",
+   "adapted",
+   "documentato",
+   "Wikipedia (Le Doulos)",
+   "https://en.wikipedia.org/wiki/Le_Doulos"
+  ],
+  [
+   "p_pierre_lesou",
+   "f_lesou",
+   "created",
+   "documentato",
+   "Wikipedia (Le Doulos)",
+   "https://en.wikipedia.org/wiki/Le_Doulos"
+  ],
+  [
+   "p_serge_reggiani",
+   "x_doulos",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Doulos)",
+   "https://en.wikipedia.org/wiki/Le_Doulos"
+  ],
+  [
+   "p_jean_desailly",
+   "x_doulos",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Doulos)",
+   "https://en.wikipedia.org/wiki/Le_Doulos"
+  ],
+  [
+   "p_rene_lefevre",
+   "x_doulos",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Doulos)",
+   "https://en.wikipedia.org/wiki/Le_Doulos"
+  ],
+  [
+   "p_marcel_cuvelier",
+   "x_doulos",
+   "starred",
+   "documentato",
+   "Wikipedia (Le Doulos)",
+   "https://en.wikipedia.org/wiki/Le_Doulos"
+  ],
+  [
+   "p_bourvil",
+   "m_cercle",
+   "starred",
+   "documentato",
+   "Wikiwand (Le Cercle rouge)",
+   "https://origin-production.wikiwand.com/en/Le_Cercle_rouge"
+  ],
+  [
+   "p_yves_montand",
+   "m_cercle",
+   "starred",
+   "documentato",
+   "Wikiwand (Le Cercle rouge)",
+   "https://origin-production.wikiwand.com/en/Le_Cercle_rouge"
+  ],
+  [
+   "c_volonte",
+   "m_cercle",
+   "starred",
+   "documentato",
+   "Wikiwand (Le Cercle rouge)",
+   "https://origin-production.wikiwand.com/en/Le_Cercle_rouge"
+  ],
+  [
+   "p_francois_perier",
+   "m_cercle",
+   "starred",
+   "documentato",
+   "Wikiwand (Le Cercle rouge)",
+   "https://origin-production.wikiwand.com/en/Le_Cercle_rouge"
+  ],
+  [
+   "p_eric_demarsan",
+   "m_cercle",
+   "scored",
+   "documentato",
+   "Wikiwand (Le Cercle rouge)",
+   "https://origin-production.wikiwand.com/en/Le_Cercle_rouge"
+  ],
+  [
+   "p_marcello_fondato",
+   "b_bbl",
+   "wrote",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_giuseppe_barilla",
+   "b_bbl",
+   "wrote",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_eva_bartok",
+   "b_bbl",
+   "starred",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_cameron_mitchell",
+   "b_bbl",
+   "starred",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_thomas_reiner",
+   "b_bbl",
+   "starred",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_claude_dantes",
+   "b_bbl",
+   "starred",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_dante_dipaolo",
+   "b_bbl",
+   "starred",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_carlo_rustichelli",
+   "b_bbl",
+   "scored",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "c_argento",
+   "f_bird",
+   "created",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "b_bbl",
+   "f_bird",
+   "inspired",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "c_scorsese",
+   "f_kundun",
+   "created",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "b_bbl",
+   "f_kundun",
+   "homage",
+   "documentato",
+   "Wikipedia (Blood and Black Lace)",
+   "https://en.wikipedia.org/wiki/Blood_and_Black_Lace"
+  ],
+  [
+   "p_marcello_fondato",
+   "x_bs",
+   "wrote",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_alberto_bevilacqua",
+   "x_bs",
+   "wrote",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_boris_karloff",
+   "x_bs",
+   "starred",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_mark_damon",
+   "x_bs",
+   "starred",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_michele_mercier",
+   "x_bs",
+   "starred",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_susy_andersen",
+   "x_bs",
+   "starred",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_lydia_alfonsi",
+   "x_bs",
+   "starred",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "x_bs",
+   "m_bsband",
+   "name",
+   "documentato",
+   "Wikipedia (Black Sabbath)",
+   "https://en.wikipedia.org/wiki/Black_Sabbath_(film)"
+  ],
+  [
+   "p_giuseppe_zaccariello",
+   "b_bob",
+   "wrote",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_filippo_ottoni",
+   "b_bob",
+   "wrote",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_claudine_auger",
+   "b_bob",
+   "starred",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_luigi_pistilli",
+   "b_bob",
+   "starred",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_claudio_volonte",
+   "b_bob",
+   "starred",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_anna_m_rosati",
+   "b_bob",
+   "starred",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_laura_betti",
+   "b_bob",
+   "starred",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "p_stelvio_cipriani",
+   "b_bob",
+   "scored",
+   "documentato",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "b_bob",
+   "f_burning",
+   "inspired",
+   "critica",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
+  ],
+  [
+   "b_bob",
+   "f_scream",
+   "inspired",
+   "critica",
+   "Wikipedia (A Bay of Blood)",
+   "https://en.wikipedia.org/wiki/A_Bay_of_Blood"
   ]
  ]
 }
